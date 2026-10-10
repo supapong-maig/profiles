@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "example-project",
+    "title": "[ชื่อโปรเจกต์]",
+    "summary": "[สรุป 1 บรรทัด: ทำอะไร ให้ใคร ได้ผลอะไร]",
+    "start": "2024-01",
+    "end": "2024-06",
+    "role": "[บทบาทของคุณ]",
+    "teamSize": 4,
+    "type": "งานบริษัท",
+    "featured": true,
+    "tags": ["[Tech 1]", "[Tech 2]"],
+    "links": [{ "label": "Demo", "url": "https://example.com" }],
+    "problem": "[สถานการณ์ก่อนเริ่ม: ใครเจอปัญหาอะไร ส่งผลกระทบอย่างไร]",
+    "actions": ["[การตัดสินใจหรือการลงมือที่สำคัญ 1]", "[2]", "[3]"],
+    "results": ["[ผลลัพธ์เชิงตัวเลข]", "[Feedback จากผู้ใช้ / ลูกค้า]"],
+    "lessons": "[สิ่งที่จะทำต่างออกไปถ้าได้ทำใหม่]"
+  },
+  {
+    "slug": "side-project",
+    "title": "[ชื่อ Side project]",
+    "summary": "[สรุป 1 บรรทัด]",
+    "start": "2025-03",
+    "end": null,
+    "role": "[บทบาท]",
+    "teamSize": 1,
+    "type": "Side project",
+    "featured": true,
+    "tags": ["[Tech]"],
+    "links": [],
+    "problem": "[ปัญหา]",
+    "actions": ["[สิ่งที่ทำ]"],
+    "results": ["[ผลลัพธ์]"],
+    "lessons": "[สิ่งที่ได้เรียนรู้]"
+  }
+]
