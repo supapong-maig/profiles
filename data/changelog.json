@@ -1,0 +1,5 @@
+[
+  { "date": "2026-10-10", "title": "ย้ายเว็บไปใช้ Next.js + ข้อมูล JSON", "detail": "แยกเนื้อหาเป็นไฟล์ JSON ใน data/ และ deploy ด้วย GitHub Actions" },
+  { "date": "2026-10-10", "title": "เปลี่ยนฟอนต์เป็น Kanit", "detail": "" },
+  { "date": "2026-10-10", "title": "เปิดเว็บ Portfolio ครั้งแรก", "detail": "" }
+]
