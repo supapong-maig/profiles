@@ -1,19 +1,169 @@
 {
   "categories": [
-    { "name": "AI-native", "items": ["Claude Code", "MCP", "Claude Sonnet", "OpenAI embeddings", "MongoDB Atlas Vector Search", "git worktrees"] },
-    { "name": "หน้าบ้านและมือถือ", "items": ["Nuxt 3", "Vue 3", "React", "Angular", "TypeScript", "PWA", "Flutter", "iOS", "Android"] },
-    { "name": "หลังบ้านและ API", "items": ["NestJS", "Node.js", "C# / .NET", ".NET 6", ".NET Core", "REST APIs"] },
-    { "name": "ข้อมูล", "items": ["MongoDB Atlas", "MySQL", "SQL Server", "DynamoDB", "Elasticsearch", "Bloomberg", "Excel VBA"] },
-    { "name": "คลาวด์และ DevOps", "items": ["AWS", "AWS Lambda", "AWS ECS", "AWS Batch", "Vercel", "CI/CD"] },
-    { "name": "คุณภาพ", "items": ["E2E testing"] }
+    {
+      "name": {
+        "en": "AI-native",
+        "th": "AI-native"
+      },
+      "items": [
+        "Claude Code",
+        "MCP",
+        "Claude Sonnet",
+        "OpenAI embeddings",
+        "MongoDB Atlas Vector Search",
+        "git worktrees"
+      ]
+    },
+    {
+      "name": {
+        "en": "Frontend & mobile",
+        "th": "หน้าบ้านและมือถือ"
+      },
+      "items": [
+        "Nuxt 3",
+        "Vue 3",
+        "React",
+        "Angular",
+        "TypeScript",
+        "PWA",
+        "Flutter",
+        "iOS",
+        "Android"
+      ]
+    },
+    {
+      "name": {
+        "en": "Backend & APIs",
+        "th": "หลังบ้านและ API"
+      },
+      "items": [
+        "NestJS",
+        "Node.js",
+        "C# / .NET",
+        ".NET 6",
+        ".NET Core",
+        "REST APIs"
+      ]
+    },
+    {
+      "name": {
+        "en": "Data",
+        "th": "ข้อมูล"
+      },
+      "items": [
+        "MongoDB Atlas",
+        "MySQL",
+        "SQL Server",
+        "DynamoDB",
+        "Elasticsearch",
+        "Bloomberg",
+        "Excel VBA"
+      ]
+    },
+    {
+      "name": {
+        "en": "Cloud & DevOps",
+        "th": "คลาวด์และ DevOps"
+      },
+      "items": [
+        "AWS",
+        "AWS Lambda",
+        "AWS ECS",
+        "AWS Batch",
+        "Vercel",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": {
+        "en": "Quality",
+        "th": "คุณภาพ"
+      },
+      "items": [
+        "E2E testing"
+      ]
+    }
   ],
   "skills": [
-    { "group": "AI-native engineering", "items": ["Claude Code", "agent harness (CLAUDE.md rules, skills, hooks, MCP tools, subagents, git worktrees)", "multi-agent orchestration", "eval sets และ AI observability", "RAG pipelines (vector search, embeddings)", "LLM API (Anthropic, OpenAI)"] },
-    { "group": "Frontend", "items": ["React", "Vue 3 / Nuxt 3", "Angular", "TypeScript", "JavaScript (ES2020+)", "HTML5 / CSS3", "PWA", "Flutter"] },
-    { "group": "Backend & APIs", "items": ["Node.js / NestJS", "C# / .NET 6+", "REST API design", "webhooks", "OAuth", "gRPC", "Python (Django) — working knowledge"] },
-    { "group": "Data", "items": ["PostgreSQL", "MySQL", "SQL Server", "MongoDB Atlas (รวม Vector Search)", "DynamoDB", "Elasticsearch", "Redis", "query optimization", "concurrent-write handling"] },
-    { "group": "Cloud & DevOps", "items": ["AWS (Lambda, ECS, EC2, S3, RDS, Batch, CloudWatch)", "Vercel", "Docker", "CI/CD", "GitHub"] },
-    { "group": "Quality", "items": ["unit และ E2E test automation", "self-validating agent loops", "refactoring live codebases", "security-minded design"] },
-    { "group": "Ways of working", "items": ["Agile / Scrum", "ทำงานร่วมกับ product และ design", "mentoring และอบรมเทคนิค", "Notion", "Slack", "Figma"] }
+    {
+      "group": "AI-native engineering",
+      "items": [
+        "Claude Code",
+        "agent harness (CLAUDE.md rules, skills, hooks, MCP tools, subagents, git worktrees)",
+        "multi-agent orchestration",
+        "eval sets and AI observability",
+        "RAG pipelines (vector search, embeddings)",
+        "LLM API (Anthropic, OpenAI)"
+      ]
+    },
+    {
+      "group": "Frontend",
+      "items": [
+        "React",
+        "Vue 3 / Nuxt 3",
+        "Angular",
+        "TypeScript",
+        "JavaScript (ES2020+)",
+        "HTML5 / CSS3",
+        "PWA",
+        "Flutter"
+      ]
+    },
+    {
+      "group": "Backend & APIs",
+      "items": [
+        "Node.js / NestJS",
+        "C# / .NET 6+",
+        "REST API design",
+        "webhooks",
+        "OAuth",
+        "gRPC",
+        "Python (Django) — working knowledge"
+      ]
+    },
+    {
+      "group": "Data",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "SQL Server",
+        "MongoDB Atlas (incl. Vector Search)",
+        "DynamoDB",
+        "Elasticsearch",
+        "Redis",
+        "query optimization",
+        "concurrent-write handling"
+      ]
+    },
+    {
+      "group": "Cloud & DevOps",
+      "items": [
+        "AWS (Lambda, ECS, EC2, S3, RDS, Batch, CloudWatch)",
+        "Vercel",
+        "Docker",
+        "CI/CD",
+        "GitHub"
+      ]
+    },
+    {
+      "group": "Quality",
+      "items": [
+        "unit and E2E test automation",
+        "self-validating agent loops",
+        "refactoring live codebases",
+        "security-minded design"
+      ]
+    },
+    {
+      "group": "Ways of working",
+      "items": [
+        "Agile / Scrum",
+        "product and design collaboration",
+        "mentoring and technical training",
+        "Notion",
+        "Slack",
+        "Figma"
+      ]
+    }
   ]
 }

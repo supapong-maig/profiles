@@ -2,23 +2,45 @@
   "name": "Supapong Ngonkham",
   "headline": "Senior Full-Stack Engineer · AI-Native",
   "focusLine": "AI-Native · Full-Stack Engineer · FinTech & InsurTech",
+  "photo": { "src": "/profile.jpg", "width": 640, "height": 800 },
   "bio": [
-    "ผมเป็นวิศวกร Full-Stack ที่ส่งมอบเว็บแอปพลิเคชันขึ้น production มากว่า 15 ปี ในงาน FinTech, payment gateway และประกันภัย พื้นฐานเป็นวิศวกรรมคอมพิวเตอร์ และต่อ MBA ด้านการเงิน จึงเข้าใจทั้งโค้ดและธุรกิจการเงินที่โค้ดนั้นรับใช้",
-    "สองปีหลังผมทำงานแบบ AI-native: กำกับ Claude Code agents ให้สร้าง pull request ที่ merge ได้จริง คุมคุณภาพด้วย test loop อัตโนมัติ และเปลี่ยนความผิดพลาดที่ AI ทำซ้ำ ๆ ให้เป็น context และ guardrail ที่ใช้ซ้ำได้ ล่าสุดออกแบบและสร้าง Covera ตั้งแต่ต้นจนจบ: SaaS ประกันภัยด้วย AI ที่ใช้ RAG บนเอกสารประกันภาษาไทย, OCR และด่าน PDPA"
+    {
+      "en": "Senior full-stack engineer with 15+ years shipping production web applications across FinTech, payment gateways, and insurance. I trained as a computer engineer and later took an MBA in finance, so I understand both the code and the financial business it serves.",
+      "th": "ผมเป็นวิศวกร Full-Stack ที่ส่งมอบเว็บแอปพลิเคชันขึ้น production มากว่า 15 ปี ในงาน FinTech, payment gateway และประกันภัย พื้นฐานเป็นวิศวกรรมคอมพิวเตอร์ และต่อ MBA ด้านการเงิน จึงเข้าใจทั้งโค้ดและธุรกิจการเงินที่โค้ดนั้นรับใช้"
+    },
+    {
+      "en": "For the last two years I have worked AI-native: directing Claude Code agents to produce mergeable pull requests, enforcing quality through automated test loops, and turning recurring AI mistakes into reusable context and guardrails. Most recently I designed and built Covera end-to-end, an AI-powered insurtech SaaS built on RAG over Thai insurance documents, OCR, and PDPA compliance gates.",
+      "th": "สองปีหลังผมทำงานแบบ AI-native: กำกับ Claude Code agents ให้สร้าง pull request ที่ merge ได้จริง คุมคุณภาพด้วย test loop อัตโนมัติ และเปลี่ยนความผิดพลาดที่ AI ทำซ้ำ ๆ ให้เป็น context และ guardrail ที่ใช้ซ้ำได้ ล่าสุดออกแบบและสร้าง Covera ตั้งแต่ต้นจนจบ: SaaS ประกันภัยด้วย AI ที่ใช้ RAG บนเอกสารประกันภาษาไทย, OCR และด่าน PDPA"
+    }
   ],
   "summary": [
-    "วิศวกร Full-Stack ประสบการณ์ 15+ ปี ในงาน FinTech, payment และประกันภัย",
-    "สร้าง agent harness รอบ Claude Code ที่ให้ agent หลายตัวทำงานคู่ขนานภายใต้ guardrail และ quality gate เดียวกัน",
-    "ออกแบบและส่งมอบ Covera ครบวงจร: RAG บนเอกสารประกันภาษาไทยที่ทุกคำตอบอ้างอิงแหล่งที่มาได้"
+    {
+      "en": "Full-stack engineer with 15+ years across FinTech, payments, and insurance",
+      "th": "วิศวกร Full-Stack ประสบการณ์ 15+ ปี ในงาน FinTech, payment และประกันภัย"
+    },
+    {
+      "en": "Built an agent harness around Claude Code that runs agents in parallel under shared guardrails and quality gates",
+      "th": "สร้าง agent harness รอบ Claude Code ที่ให้ agent หลายตัวทำงานคู่ขนานภายใต้ guardrail และ quality gate เดียวกัน"
+    },
+    {
+      "en": "Designed and delivered Covera end-to-end: RAG over Thai insurance documents where every answer is traceable to its source",
+      "th": "ออกแบบและส่งมอบ Covera ครบวงจร: RAG บนเอกสารประกันภาษาไทยที่ทุกคำตอบอ้างอิงแหล่งที่มาได้"
+    }
   ],
   "now": { "role": "Senior Full-Stack Engineer (AI-Native)", "company": "Jaidee Innovation Co., Ltd.", "since": "2025-09" },
-  "experienceYears": "15+ ปี",
-  "path": ["วิศวกรรมคอมพิวเตอร์", ".NET และมือถือ", "MBA การเงิน", "FinTech & Insurtech", "AI-Native"],
+  "experienceYears": { "en": "15+ years", "th": "15+ ปี" },
+  "path": [
+    { "en": "Computer engineering", "th": "วิศวกรรมคอมพิวเตอร์" },
+    { "en": ".NET and mobile", "th": ".NET และมือถือ" },
+    { "en": "MBA in finance", "th": "MBA การเงิน" },
+    { "en": "FinTech & Insurtech", "th": "FinTech & Insurtech" },
+    { "en": "AI-Native", "th": "AI-Native" }
+  ],
   "coreTech": ["Claude Code", "TypeScript", "Nuxt 3", "Vue 3", "React", "Angular", "NestJS", "C# / .NET", "MongoDB Atlas", "AWS", "Vercel"],
-  "location": "กรุงเทพฯ ประเทศไทย",
+  "location": { "en": "Bangkok, Thailand", "th": "กรุงเทพฯ ประเทศไทย" },
   "languages": [
-    { "name": "ไทย", "level": "ภาษาแม่" },
-    { "name": "อังกฤษ", "level": "ใช้งานระดับมืออาชีพ" }
+    { "name": { "en": "Thai", "th": "ไทย" }, "level": { "en": "native", "th": "ภาษาแม่" } },
+    { "name": { "en": "English", "th": "อังกฤษ" }, "level": { "en": "professional", "th": "ใช้งานระดับมืออาชีพ" } }
   ],
   "interests": ["Agent Harness Engineering", "Full-Stack Development", "FinTech & Insurtech"],
   "contacts": [

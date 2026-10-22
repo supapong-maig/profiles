@@ -9,6 +9,8 @@
 
 เนื้อหาทั้งหมดอยู่ในไฟล์ JSON ใน `data/` แก้ที่นี่ที่เดียว แล้ว push เข้า `main` เว็บจะอัปเดตเองภายในไม่กี่นาที
 
+เว็บมีสองภาษา: อังกฤษ (ค่าเริ่มต้น) ที่ `/profiles/` และไทยที่ `/profiles/th/` ข้อความที่แปลได้เขียนเป็นคู่ `{ "en": "...", "th": "..." }` ส่วนข้อความของปุ่มและหัวข้อต่าง ๆ อยู่ใน `lib/i18n.ts` รูปโปรไฟล์อยู่ที่ `public/profile.jpg`
+
 | ไฟล์ | ใช้ในส่วน |
 |---|---|
 | `data/profile.json` | หัวเว็บ, ภาพรวมโดยย่อ, ช่องทางติดต่อ |
@@ -21,7 +23,7 @@
 | `data/credentials.json` | การศึกษาและใบรับรอง |
 | `data/changelog.json` | ประวัติการอัปเดต (เพิ่มรายการบนสุด) |
 
-`npm test` จะตรวจว่าข้อมูลครบ ลำดับถูก และเทคโนโลยีทุกตัวใน `experience.json` มีหมวดใน `stack.json`
+`npm test` จะตรวจว่าข้อมูลครบ ลำดับถูก ทุกข้อความมีทั้งภาษาอังกฤษและไทย และเทคโนโลยีทุกตัวใน `experience.json` มีหมวดใน `stack.json`
 
 ## Tech stack
 
@@ -36,9 +38,10 @@
 ## โครงสร้างโค้ด
 
 ```
-app/(site)/        หน้าแรก (หน้าเดียว), updates, architecture
-components/        Header, Footer, Rail (สารบัญ), ExperienceTimeline (กรองตามด้าน), Chips
-lib/               โหลดข้อมูล + types, สารบัญ
+app/(site)/        หน้าแรก, updates, architecture (อังกฤษ) และชุดเดียวกันใต้ th/ (ไทย)
+components/pages/  คอมโพเนนต์ของแต่ละหน้า ใช้ได้ทั้งสองภาษา
+components/        Header, Footer, LangToggle, Rail (สารบัญ), ExperienceTimeline (กรองตามด้าน), Chips
+lib/               โหลดข้อมูล + types, ข้อความ i18n
 data/              เนื้อหาทั้งหมด (.json)
 tests/             ตรวจข้อมูล JSON
 .github/workflows/ build + deploy GitHub Pages

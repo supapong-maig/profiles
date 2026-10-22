@@ -1,22 +1,44 @@
 "use client";
 
 import { useState } from "react";
-import type { Area, Experience } from "@/lib/data";
 import { Chips } from "./Chips";
 
-type Item = Experience & { period: string };
+export type TimelineItem = {
+  id: string;
+  kind: "work" | "education";
+  startYear: string;
+  period: string;
+  role: string;
+  company: string;
+  unit: string;
+  areas: string[];
+  highlight: boolean;
+  summary: string;
+  groups: { title: string; items: string[] }[];
+  tech: string[];
+};
 
-/** Experience as a vertical flow rail, filterable by area. */
-export function ExperienceTimeline({ items, areas }: { items: Item[]; areas: Area[] }) {
+export type TimelineLabels = {
+  filterLabel: string;
+  all: string;
+  present: string;
+  start: string;
+  highlight: string;
+  education: string;
+  tech: string;
+};
+
+/** Experience as a vertical flow rail, filterable by area. Receives text already in the page's language. */
+export function ExperienceTimeline({ items, areas, labels }: { items: TimelineItem[]; areas: { id: string; label: string }[]; labels: TimelineLabels }) {
   const [area, setArea] = useState<string | null>(null);
   const shown = area ? items.filter((e) => e.areas.includes(area)) : items;
   const used = areas.filter((a) => items.some((e) => e.areas.includes(a.id)));
 
   return (
     <>
-      <div className="filter" role="group" aria-label="กรองตามด้าน">
+      <div className="filter" role="group" aria-label={labels.filterLabel}>
         <button type="button" aria-pressed={area === null} onClick={() => setArea(null)}>
-          ทั้งหมด
+          {labels.all}
         </button>
         {used.map((a) => (
           <button key={a.id} type="button" aria-pressed={area === a.id} onClick={() => setArea(a.id)}>
@@ -28,7 +50,7 @@ export function ExperienceTimeline({ items, areas }: { items: Item[]; areas: Are
       <div className="flow">
         <div className="term">
           <span className="dot" />
-          <span className="pill">ปัจจุบัน</span>
+          <span className="pill">{labels.present}</span>
         </div>
         {shown.map((e) =>
           e.kind === "education" ? (
@@ -37,28 +59,36 @@ export function ExperienceTimeline({ items, areas }: { items: Item[]; areas: Are
                 🎓
               </span>
               <div className="step-body">
-                <div className="eyebrow">{e.period} · การศึกษา</div>
+                <div className="eyebrow">
+                  {e.period} · {labels.education}
+                </div>
                 <h3>
-                  {e.role} <span className="sub">{e.company} · {e.unit}</span>
+                  {e.role}{" "}
+                  <span className="sub">
+                    {e.company} · {e.unit}
+                  </span>
                 </h3>
               </div>
             </div>
           ) : (
             <article key={e.id} id={`t-${e.id}`} className="step">
               <span className="node" aria-hidden="true">
-                {e.start.slice(2, 4)}
+                {e.startYear.slice(2, 4)}
               </span>
               <div className="step-body">
                 <div className="eyebrow">
                   {e.period}
-                  {e.highlight && <span className="badge">ไฮไลต์</span>}
+                  {e.highlight && <span className="badge">{labels.highlight}</span>}
                 </div>
                 <h3>
-                  {e.role} <span className="sub">{e.company} · {e.unit}</span>
+                  {e.role}{" "}
+                  <span className="sub">
+                    {e.company} · {e.unit}
+                  </span>
                 </h3>
                 <p className="step-summary">{e.summary}</p>
-                {e.groups.map((g) => (
-                  <div key={g.title || e.id} className="group">
+                {e.groups.map((g, gi) => (
+                  <div key={gi} className="group">
                     {g.title && <h4>{g.title}</h4>}
                     <ul>
                       {g.items.map((i) => (
@@ -67,14 +97,14 @@ export function ExperienceTimeline({ items, areas }: { items: Item[]; areas: Are
                     </ul>
                   </div>
                 ))}
-                <Chips items={e.tech} label="เทคโนโลยี" />
+                <Chips items={e.tech} label={labels.tech} />
               </div>
             </article>
           ),
         )}
         <div className="term end">
           <span className="dot" />
-          <span className="pill">เริ่มต้นเส้นทาง</span>
+          <span className="pill">{labels.start}</span>
         </div>
       </div>
     </>

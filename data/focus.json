@@ -1,32 +1,50 @@
 [
   {
     "id": "ai",
-    "en": "AI-Native Development",
-    "th": "กำกับ Claude Code agents ให้สร้าง pull request ที่ merge ได้ คุมคุณภาพด้วย test loop อัตโนมัติ"
+    "title": "AI-Native Development",
+    "desc": {
+      "en": "Directing Claude Code agents to produce mergeable pull requests, with quality enforced by automated test loops",
+      "th": "กำกับ Claude Code agents ให้สร้าง pull request ที่ merge ได้ คุมคุณภาพด้วย test loop อัตโนมัติ"
+    }
   },
   {
     "id": "harness",
-    "en": "Agent Harness Engineering",
-    "th": "CLAUDE.md rules, skills, hooks และ MCP tools ที่ให้ทุก agent มี context และ guardrail เดียวกัน"
+    "title": "Agent Harness Engineering",
+    "desc": {
+      "en": "CLAUDE.md rules, skills, hooks, and MCP tools that give every agent shared context and guardrails",
+      "th": "CLAUDE.md rules, skills, hooks และ MCP tools ที่ให้ทุก agent มี context และ guardrail เดียวกัน"
+    }
   },
   {
     "id": "rag",
-    "en": "RAG & LLM Integration",
-    "th": "RAG บนเอกสารภาษาไทยด้วย vector search และ embeddings ที่ทุกคำตอบตรวจย้อนถึงแหล่งที่มาได้"
+    "title": "RAG & LLM Integration",
+    "desc": {
+      "en": "RAG over Thai documents with vector search and embeddings, where every answer is traceable to its source",
+      "th": "RAG บนเอกสารภาษาไทยด้วย vector search และ embeddings ที่ทุกคำตอบตรวจย้อนถึงแหล่งที่มาได้"
+    }
   },
   {
     "id": "fullstack",
-    "en": "Full-Stack Development",
-    "th": "React, Vue / Nuxt, Angular บนหน้าบ้าน กับ Node.js / NestJS และ C# / .NET บนหลังบ้าน"
+    "title": "Full-Stack Development",
+    "desc": {
+      "en": "React, Vue / Nuxt, and Angular on the front end; Node.js / NestJS and C# / .NET on the back end",
+      "th": "React, Vue / Nuxt, Angular บนหน้าบ้าน กับ Node.js / NestJS และ C# / .NET บนหลังบ้าน"
+    }
   },
   {
     "id": "fintech",
-    "en": "FinTech & Insurtech",
-    "th": "payment gateway, mobile banking และระบบประกันภัย พร้อมใบอนุญาตตัวแทนประกันชีวิตและ IC"
+    "title": "FinTech & Insurtech",
+    "desc": {
+      "en": "Payment gateways, mobile banking, and insurance systems, backed by life insurance agent and IC licenses",
+      "th": "payment gateway, mobile banking และระบบประกันภัย พร้อมใบอนุญาตตัวแทนประกันชีวิตและ IC"
+    }
   },
   {
     "id": "cloud",
-    "en": "Cloud & Quality",
-    "th": "AWS, Vercel, Docker และ CI/CD กับ unit / E2E test automation และการออกแบบที่คำนึงถึงความปลอดภัย"
+    "title": "Cloud & Quality",
+    "desc": {
+      "en": "AWS, Vercel, Docker, and CI/CD, with unit / E2E test automation and security-minded design",
+      "th": "AWS, Vercel, Docker และ CI/CD กับ unit / E2E test automation และการออกแบบที่คำนึงถึงความปลอดภัย"
+    }
   }
 ]

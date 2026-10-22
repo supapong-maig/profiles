@@ -8,8 +8,8 @@ const body = IBM_Plex_Sans_Thai({ subsets: ["thai", "latin"], weight: ["400", "5
 const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], display: "swap", variable: "--font-mono" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://supapong-maig.github.io/profiles/"),
   title: { default: `${profile.name} — ${profile.headline}`, template: `%s · ${profile.name}` },
-  description: profile.summary.join(" "),
 };
 
 export const viewport: Viewport = {
@@ -21,7 +21,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="th" className={`${display.variable} ${body.variable} ${mono.variable}`}>
+    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <body>{children}</body>
     </html>
   );

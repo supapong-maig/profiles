@@ -5,42 +5,117 @@
     "start": "2025-09",
     "end": null,
     "role": "Senior Full-Stack Engineer (AI-Native)",
-    "company": "Jaidee Innovation Co., Ltd.",
-    "unit": "กรุงเทพฯ",
+    "company": {
+      "en": "Jaidee Innovation Co., Ltd.",
+      "th": "Jaidee Innovation Co., Ltd."
+    },
+    "unit": {
+      "en": "Bangkok",
+      "th": "กรุงเทพฯ"
+    },
     "phase": "ai",
-    "areas": ["ai", "fullstack", "insurtech", "cloud"],
+    "areas": [
+      "ai",
+      "fullstack",
+      "insurtech",
+      "cloud"
+    ],
     "highlight": true,
-    "summary": "สร้าง agent harness ที่ใช้ซ้ำได้ทุกโปรเจกต์ ออกแบบและส่งมอบ Covera และดูแลแพลตฟอร์มของลูกค้า",
+    "summary": {
+      "en": "Built a reusable agent harness, designed and delivered Covera, and ran client platforms",
+      "th": "สร้าง agent harness ที่ใช้ซ้ำได้ทุกโปรเจกต์ ออกแบบและส่งมอบ Covera และดูแลแพลตฟอร์มของลูกค้า"
+    },
     "groups": [
       {
-        "title": "Agent harness — ใช้ซ้ำได้ทุกโปรเจกต์",
+        "title": {
+          "en": "Agent harness — reusable across projects",
+          "th": "Agent harness — ใช้ซ้ำได้ทุกโปรเจกต์"
+        },
         "items": [
-          "สร้าง agent harness ส่วนตัวรอบ Claude Code: CLAUDE.md rules, skills, hooks และ MCP tools ให้ทุก agent มี context และ guardrail ร่วมกัน",
-          "Subagent สำหรับ implement, review และ test ทำงานคู่ขนานบน git worktrees ถูก orchestrate อัตโนมัติภายใต้สิทธิ์ที่จำกัดขอบเขต",
-          "Quality gate: unit / E2E test อัตโนมัติ, eval set สำหรับผลลัพธ์ของ AI, AI observability และด่าน deploy production ที่คนกดเอง",
-          "รวมเป็น template repo: คำสั่งเดียวสร้างโปรเจกต์ใหม่ที่ตั้งค่า base rules และ git policy ไว้ครบ"
+          {
+            "en": "Built a personal agent harness around Claude Code: CLAUDE.md rules, skills, hooks, and MCP tools give every agent shared context and guardrails.",
+            "th": "สร้าง agent harness ส่วนตัวรอบ Claude Code: CLAUDE.md rules, skills, hooks และ MCP tools ให้ทุก agent มี context และ guardrail ร่วมกัน"
+          },
+          {
+            "en": "Subagents for implement, review, and test run in parallel across git worktrees, orchestrated automatically under scoped permissions.",
+            "th": "Subagent สำหรับ implement, review และ test ทำงานคู่ขนานบน git worktrees ถูก orchestrate อัตโนมัติภายใต้สิทธิ์ที่จำกัดขอบเขต"
+          },
+          {
+            "en": "Quality gates: automated unit/E2E tests, eval sets for AI output, AI observability, and a manual deploy gate for production.",
+            "th": "Quality gate: unit / E2E test อัตโนมัติ, eval set สำหรับผลลัพธ์ของ AI, AI observability และด่าน deploy production ที่คนกดเอง"
+          },
+          {
+            "en": "Packaged as a template repo: one command scaffolds a new project with base rules and git policy preconfigured.",
+            "th": "รวมเป็น template repo: คำสั่งเดียวสร้างโปรเจกต์ใหม่ที่ตั้งค่า base rules และ git policy ไว้ครบ"
+          }
         ]
       },
       {
-        "title": "Covera — AI SaaS สำหรับตัวแทนประกันไทย",
+        "title": {
+          "en": "Covera — AI SaaS for Thai insurance agents",
+          "th": "Covera — AI SaaS สำหรับตัวแทนประกันไทย"
+        },
         "items": [
-          "รับผิดชอบสถาปัตยกรรมและการส่งมอบครบวงจร (Nuxt 3, TypeScript, MongoDB Atlas, Vercel)",
-          "สร้าง RAG pipeline สำหรับถาม-ตอบกรมธรรม์บนเอกสารประกันภาษาไทย (PDF ingestion, MongoDB Atlas Vector Search, OpenAI embeddings, Claude Sonnet) พร้อม citation-enforced validation ให้ทุกคำตอบตรวจย้อนถึงแหล่งที่มาได้",
-          "ส่งมอบ OCR สแกนกรมธรรม์, โมดูลวางแผนการเงิน (needs analysis, คำนวณช่องว่างความคุ้มครอง) และระบบติดตามลูกค้า",
-          "สร้าง AI assistant สำหรับตัวแทน โดยฝังด่าน PDPA consent และ suitability test ไว้ใน workflow",
-          "ส่งมอบเป็น PWA ที่ติดตั้งได้ ให้ประสบการณ์บน iPad ใกล้เคียงแอป native"
+          {
+            "en": "Owned architecture and end-to-end delivery (Nuxt 3, TypeScript, MongoDB Atlas, Vercel).",
+            "th": "รับผิดชอบสถาปัตยกรรมและการส่งมอบครบวงจร (Nuxt 3, TypeScript, MongoDB Atlas, Vercel)"
+          },
+          {
+            "en": "Built the RAG pipeline for policy Q&A over Thai insurance documents (PDF ingestion, MongoDB Atlas Vector Search, OpenAI embeddings, Claude Sonnet) with citation-enforced validation, so every answer is traceable to its source.",
+            "th": "สร้าง RAG pipeline สำหรับถาม-ตอบกรมธรรม์บนเอกสารประกันภาษาไทย (PDF ingestion, MongoDB Atlas Vector Search, OpenAI embeddings, Claude Sonnet) พร้อม citation-enforced validation ให้ทุกคำตอบตรวจย้อนถึงแหล่งที่มาได้"
+          },
+          {
+            "en": "Shipped OCR policy scanning, a financial-planning module (needs analysis, coverage-gap calculation), and a client follow-up tracker.",
+            "th": "ส่งมอบ OCR สแกนกรมธรรม์, โมดูลวางแผนการเงิน (needs analysis, คำนวณช่องว่างความคุ้มครอง) และระบบติดตามลูกค้า"
+          },
+          {
+            "en": "Built an AI assistant for agents, with PDPA consent and suitability-test gates built into the workflow.",
+            "th": "สร้าง AI assistant สำหรับตัวแทน โดยฝังด่าน PDPA consent และ suitability test ไว้ใน workflow"
+          },
+          {
+            "en": "Delivered as an installable PWA for a native-feeling iPad experience.",
+            "th": "ส่งมอบเป็น PWA ที่ติดตั้งได้ ให้ประสบการณ์บน iPad ใกล้เคียงแอป native"
+          }
         ]
       },
       {
-        "title": "แพลตฟอร์มของลูกค้า",
+        "title": {
+          "en": "Client platforms",
+          "th": "แพลตฟอร์มของลูกค้า"
+        },
         "items": [
-          "Environment Platform — marketplace บริการด้านสิ่งแวดล้อม (Vue 3, NestJS, AWS)",
-          "Cosmate — SaaS บริหารคลินิกความงาม: ประวัติคนไข้, การจอง, แพ็กเกจการรักษา, POS และการเรียกเก็บเงิน, คลังสินค้า, รายงานค่าคอมมิชชันพนักงาน",
-          "วาง CI/CD pipeline และโครงสร้าง AWS ให้ส่งมอบได้สม่ำเสมอและทำซ้ำได้"
+          {
+            "en": "Environment Platform — environmental-services marketplace (Vue 3, NestJS, AWS).",
+            "th": "Environment Platform — marketplace บริการด้านสิ่งแวดล้อม (Vue 3, NestJS, AWS)"
+          },
+          {
+            "en": "Cosmate — clinic-management SaaS for cosmetic clinics: patient records, booking, treatment packages, POS and billing, inventory, staff commission reporting.",
+            "th": "Cosmate — SaaS บริหารคลินิกความงาม: ประวัติคนไข้, การจอง, แพ็กเกจการรักษา, POS และการเรียกเก็บเงิน, คลังสินค้า, รายงานค่าคอมมิชชันพนักงาน"
+          },
+          {
+            "en": "Set up CI/CD pipelines and AWS infrastructure for reliable, repeatable delivery.",
+            "th": "วาง CI/CD pipeline และโครงสร้าง AWS ให้ส่งมอบได้สม่ำเสมอและทำซ้ำได้"
+          }
         ]
       }
     ],
-    "tech": ["Claude Code", "MCP", "Claude Sonnet", "OpenAI embeddings", "MongoDB Atlas Vector Search", "Nuxt 3", "Vue 3", "TypeScript", "PWA", "NestJS", "MongoDB Atlas", "AWS", "Vercel", "CI/CD", "E2E testing"]
+    "tech": [
+      "Claude Code",
+      "MCP",
+      "Claude Sonnet",
+      "OpenAI embeddings",
+      "MongoDB Atlas Vector Search",
+      "Nuxt 3",
+      "Vue 3",
+      "TypeScript",
+      "PWA",
+      "NestJS",
+      "MongoDB Atlas",
+      "AWS",
+      "Vercel",
+      "CI/CD",
+      "E2E testing"
+    ]
   },
   {
     "id": "krungsri-nimble",
@@ -48,22 +123,48 @@
     "start": "2023-09",
     "end": "2025-08",
     "role": "Full Stack Developer",
-    "company": "Krungsri Nimble Co., Ltd.",
-    "unit": "Outsourced ผ่าน PP&P Advance · กรุงเทพฯ",
+    "company": {
+      "en": "Krungsri Nimble Co., Ltd.",
+      "th": "Krungsri Nimble Co., Ltd."
+    },
+    "unit": {
+      "en": "Outsourced via PP&P Advance · Bangkok",
+      "th": "Outsourced ผ่าน PP&P Advance · กรุงเทพฯ"
+    },
     "phase": "fintech",
-    "areas": ["fullstack", "fintech", "mobile"],
+    "areas": [
+      "fullstack",
+      "fintech",
+      "mobile"
+    ],
     "highlight": false,
-    "summary": "พัฒนาและดูแลฟีเจอร์ของ KMA แอป mobile banking ของกรุงศรี",
+    "summary": {
+      "en": "Built and maintained features for KMA, Krungsri's mobile banking app",
+      "th": "พัฒนาและดูแลฟีเจอร์ของ KMA แอป mobile banking ของกรุงศรี"
+    },
     "groups": [
       {
-        "title": "",
+        "title": {
+          "en": "",
+          "th": ""
+        },
         "items": [
-          "พัฒนาและดูแลฟีเจอร์ของ KMA แอป mobile banking ของกรุงศรี — หน้าบ้าน Flutter กับ C# REST APIs",
-          "ส่งมอบตามมาตรฐานการเขียนโค้ดและโปรโตคอลความปลอดภัยระดับธนาคาร"
+          {
+            "en": "Developed and maintained features for KMA, Krungsri's mobile banking app — Flutter frontend backed by C# REST APIs.",
+            "th": "พัฒนาและดูแลฟีเจอร์ของ KMA แอป mobile banking ของกรุงศรี — หน้าบ้าน Flutter กับ C# REST APIs"
+          },
+          {
+            "en": "Delivered to bank-grade coding standards and security protocols.",
+            "th": "ส่งมอบตามมาตรฐานการเขียนโค้ดและโปรโตคอลความปลอดภัยระดับธนาคาร"
+          }
         ]
       }
     ],
-    "tech": ["Flutter", "C# / .NET", "REST APIs"]
+    "tech": [
+      "Flutter",
+      "C# / .NET",
+      "REST APIs"
+    ]
   },
   {
     "id": "2c2p",
@@ -71,23 +172,57 @@
     "start": "2021-05",
     "end": "2023-09",
     "role": "Full Stack Developer",
-    "company": "2C2P Co., Ltd.",
-    "unit": "Payment gateway · กรุงเทพฯ",
+    "company": {
+      "en": "2C2P Co., Ltd.",
+      "th": "2C2P Co., Ltd."
+    },
+    "unit": {
+      "en": "Payment gateway · Bangkok",
+      "th": "Payment gateway · กรุงเทพฯ"
+    },
     "phase": "fintech",
-    "areas": ["fullstack", "fintech", "cloud"],
+    "areas": [
+      "fullstack",
+      "fintech",
+      "cloud"
+    ],
     "highlight": true,
-    "summary": "พัฒนา PACO แอป payment gateway สำหรับธนาคาร และดูแล performance ของ payment flow ที่ใช้งานจริง",
+    "summary": {
+      "en": "Built PACO, a payment-gateway application for banks, and owned the performance of live payment flows",
+      "th": "พัฒนา PACO แอป payment gateway สำหรับธนาคาร และดูแล performance ของ payment flow ที่ใช้งานจริง"
+    },
     "groups": [
       {
-        "title": "",
+        "title": {
+          "en": "",
+          "th": ""
+        },
         "items": [
-          "พัฒนาและดูแล PACO แอป payment gateway สำหรับธนาคาร — หน้าบ้าน Angular, หลังบ้าน .NET 6, เก็บข้อมูลบน MySQL และ DynamoDB, เชื่อมต่อ Elasticsearch",
-          "เชื่อมบริการ AWS (Lambda, ECS, Batch) และรับผิดชอบ performance และความเสถียรของ payment flow ที่ใช้งานจริง",
-          "นำการอบรมเรื่อง architecture และ design pattern ให้นักพัฒนา และเป็นคนที่ทีมส่งปัญหาเทคนิคที่ยากที่สุดมาให้"
+          {
+            "en": "Developed and maintained PACO, a payment-gateway application for banks — Angular frontend, .NET 6 backend, MySQL and DynamoDB storage, Elasticsearch integration.",
+            "th": "พัฒนาและดูแล PACO แอป payment gateway สำหรับธนาคาร — หน้าบ้าน Angular, หลังบ้าน .NET 6, เก็บข้อมูลบน MySQL และ DynamoDB, เชื่อมต่อ Elasticsearch"
+          },
+          {
+            "en": "Integrated AWS services (Lambda, ECS, Batch) and owned the performance and reliability of live payment flows.",
+            "th": "เชื่อมบริการ AWS (Lambda, ECS, Batch) และรับผิดชอบ performance และความเสถียรของ payment flow ที่ใช้งานจริง"
+          },
+          {
+            "en": "Led architecture and design-pattern training for developers; escalation point for the team's hardest technical problems.",
+            "th": "นำการอบรมเรื่อง architecture และ design pattern ให้นักพัฒนา และเป็นคนที่ทีมส่งปัญหาเทคนิคที่ยากที่สุดมาให้"
+          }
         ]
       }
     ],
-    "tech": ["Angular", ".NET 6", "MySQL", "DynamoDB", "Elasticsearch", "AWS Lambda", "AWS ECS", "AWS Batch"]
+    "tech": [
+      "Angular",
+      ".NET 6",
+      "MySQL",
+      "DynamoDB",
+      "Elasticsearch",
+      "AWS Lambda",
+      "AWS ECS",
+      "AWS Batch"
+    ]
   },
   {
     "id": "blueventure",
@@ -95,22 +230,48 @@
     "start": "2017-07",
     "end": "2021-04",
     "role": "Full Stack Developer",
-    "company": "BlueVenture Group PCL",
-    "unit": "ระบบประกันภัย · กรุงเทพฯ",
+    "company": {
+      "en": "BlueVenture Group PCL",
+      "th": "BlueVenture Group PCL"
+    },
+    "unit": {
+      "en": "Insurance systems · Bangkok",
+      "th": "ระบบประกันภัย · กรุงเทพฯ"
+    },
     "phase": "fintech",
-    "areas": ["fullstack", "insurtech"],
+    "areas": [
+      "fullstack",
+      "insurtech"
+    ],
     "highlight": false,
-    "summary": "สร้าง dashboard งานปฏิบัติการประกันภัยที่เจ้าหน้าที่บริษัทประกันใช้ทุกวัน",
+    "summary": {
+      "en": "Built an insurance operations dashboard used daily by insurer officers",
+      "th": "สร้าง dashboard งานปฏิบัติการประกันภัยที่เจ้าหน้าที่บริษัทประกันใช้ทุกวัน"
+    },
     "groups": [
       {
-        "title": "",
+        "title": {
+          "en": "",
+          "th": ""
+        },
         "items": [
-          "สร้างและดูแล dashboard งานปฏิบัติการประกันภัย (Angular, .NET Core) ที่เจ้าหน้าที่บริษัทประกันใช้อนุมัติเคลม ตรวจสอบ นัดซ่อม และติดตามความพึงพอใจต่ออู่",
-          "ออกแบบ backend service ที่ขยายได้ และการเชื่อมต่อ API ที่ปลอดภัยกับบริษัทประกันพันธมิตร"
+          {
+            "en": "Built and maintained an insurance operations dashboard (Angular, .NET Core) used by insurer officers for claim approval, verification, repair scheduling, and garage-satisfaction tracking.",
+            "th": "สร้างและดูแล dashboard งานปฏิบัติการประกันภัย (Angular, .NET Core) ที่เจ้าหน้าที่บริษัทประกันใช้อนุมัติเคลม ตรวจสอบ นัดซ่อม และติดตามความพึงพอใจต่ออู่"
+          },
+          {
+            "en": "Designed scalable backend services and secure API integrations with partner insurers.",
+            "th": "ออกแบบ backend service ที่ขยายได้ และการเชื่อมต่อ API ที่ปลอดภัยกับบริษัทประกันพันธมิตร"
+          }
         ]
       }
     ],
-    "tech": ["Angular", ".NET Core", "SQL Server", "REST APIs"]
+    "tech": [
+      "Angular",
+      ".NET Core",
+      "SQL Server",
+      "REST APIs"
+    ]
   },
   {
     "id": "kasikorn-securities",
@@ -118,22 +279,46 @@
     "start": "2016",
     "end": "2017",
     "role": "Quantitative Analyst",
-    "company": "Kasikorn Securities PCL",
-    "unit": "Research Department · กรุงเทพฯ",
+    "company": {
+      "en": "Kasikorn Securities PCL",
+      "th": "Kasikorn Securities PCL"
+    },
+    "unit": {
+      "en": "Research Department · Bangkok",
+      "th": "Research Department · กรุงเทพฯ"
+    },
     "phase": "finance",
-    "areas": ["fintech", "data"],
+    "areas": [
+      "fintech",
+      "data"
+    ],
     "highlight": false,
-    "summary": "รวบรวมและวิเคราะห์ข้อมูลตลาดให้นักวิเคราะห์ฝ่ายวิจัย",
+    "summary": {
+      "en": "Collected and analysed market data for research analysts",
+      "th": "รวบรวมและวิเคราะห์ข้อมูลตลาดให้นักวิเคราะห์ฝ่ายวิจัย"
+    },
     "groups": [
       {
-        "title": "",
+        "title": {
+          "en": "",
+          "th": ""
+        },
         "items": [
-          "รวบรวมและวิเคราะห์ข้อมูลตลาดจาก Bloomberg, ธนาคารแห่งประเทศไทย และ NSDB ให้นักวิเคราะห์ฝ่ายวิจัย",
-          "เปลี่ยนงานประจำวันที่ทำซ้ำให้เป็นอัตโนมัติด้วย Excel macro และ VBA"
+          {
+            "en": "Collected and analyzed market data from Bloomberg, Bank of Thailand, and NSDB for research analysts.",
+            "th": "รวบรวมและวิเคราะห์ข้อมูลตลาดจาก Bloomberg, ธนาคารแห่งประเทศไทย และ NSDB ให้นักวิเคราะห์ฝ่ายวิจัย"
+          },
+          {
+            "en": "Automated recurring daily tasks with Excel macros and VBA.",
+            "th": "เปลี่ยนงานประจำวันที่ทำซ้ำให้เป็นอัตโนมัติด้วย Excel macro และ VBA"
+          }
         ]
       }
     ],
-    "tech": ["Bloomberg", "Excel VBA"]
+    "tech": [
+      "Bloomberg",
+      "Excel VBA"
+    ]
   },
   {
     "id": "mba",
@@ -141,12 +326,23 @@
     "start": "2014",
     "end": "2014",
     "role": "MBA, Finance",
-    "company": "มหาวิทยาลัยเกษตรศาสตร์",
-    "unit": "GPA 3.53 / 4.00",
+    "company": {
+      "en": "Kasetsart University",
+      "th": "มหาวิทยาลัยเกษตรศาสตร์"
+    },
+    "unit": {
+      "en": "GPA 3.53 / 4.00",
+      "th": "GPA 3.53 / 4.00"
+    },
     "phase": "finance",
-    "areas": ["fintech"],
+    "areas": [
+      "fintech"
+    ],
     "highlight": false,
-    "summary": "ปริญญาโทบริหารธุรกิจ สาขาการเงิน",
+    "summary": {
+      "en": "Master of Business Administration in Finance",
+      "th": "ปริญญาโทบริหารธุรกิจ สาขาการเงิน"
+    },
     "groups": [],
     "tech": []
   },
@@ -156,22 +352,44 @@
     "start": "2012",
     "end": "2013",
     "role": "Freelance Developer",
-    "company": "Eagle Technology Co., Ltd.",
-    "unit": "กรุงเทพฯ",
+    "company": {
+      "en": "Eagle Technology Co., Ltd.",
+      "th": "Eagle Technology Co., Ltd."
+    },
+    "unit": {
+      "en": "Bangkok",
+      "th": "กรุงเทพฯ"
+    },
     "phase": "dev",
-    "areas": ["fullstack"],
+    "areas": [
+      "fullstack"
+    ],
     "highlight": false,
-    "summary": "พัฒนาฟีเจอร์ให้ Eagle-HRS ซอฟต์แวร์ HR และ payroll ที่ใช้ใน 300+ บริษัท",
+    "summary": {
+      "en": "Built features for Eagle-HRS, HR and payroll software serving 300+ companies",
+      "th": "พัฒนาฟีเจอร์ให้ Eagle-HRS ซอฟต์แวร์ HR และ payroll ที่ใช้ใน 300+ บริษัท"
+    },
     "groups": [
       {
-        "title": "",
+        "title": {
+          "en": "",
+          "th": ""
+        },
         "items": [
-          "Freelance developer ให้ Eagle-HRS ซอฟต์แวร์เฮาส์ด้าน HR และ payroll ของไทยที่มีลูกค้า 300+ บริษัท",
-          "พัฒนาฟีเจอร์ของแอป HR ด้วย .NET"
+          {
+            "en": "Freelance developer for Eagle-HRS, a Thai HR and payroll software house serving 300+ companies.",
+            "th": "Freelance developer ให้ Eagle-HRS ซอฟต์แวร์เฮาส์ด้าน HR และ payroll ของไทยที่มีลูกค้า 300+ บริษัท"
+          },
+          {
+            "en": "Developed features for its HR application in .NET.",
+            "th": "พัฒนาฟีเจอร์ของแอป HR ด้วย .NET"
+          }
         ]
       }
     ],
-    "tech": ["C# / .NET"]
+    "tech": [
+      "C# / .NET"
+    ]
   },
   {
     "id": "ookbee",
@@ -179,22 +397,45 @@
     "start": "2011",
     "end": "2012",
     "role": "Mobile Application Developer",
-    "company": "Ookbee Co., Ltd.",
-    "unit": "กรุงเทพฯ",
+    "company": {
+      "en": "Ookbee Co., Ltd.",
+      "th": "Ookbee Co., Ltd."
+    },
+    "unit": {
+      "en": "Bangkok",
+      "th": "กรุงเทพฯ"
+    },
     "phase": "dev",
-    "areas": ["mobile"],
+    "areas": [
+      "mobile"
+    ],
     "highlight": false,
-    "summary": "เข้าร่วมทีมช่วงเติบโตแรกของ Ookbee ร้านหนังสือ e-book อันดับต้นของไทย",
+    "summary": {
+      "en": "Joined during the early growth of Ookbee, Thailand's leading e-book store",
+      "th": "เข้าร่วมทีมช่วงเติบโตแรกของ Ookbee ร้านหนังสือ e-book อันดับต้นของไทย"
+    },
     "groups": [
       {
-        "title": "",
+        "title": {
+          "en": "",
+          "th": ""
+        },
         "items": [
-          "เข้าร่วมช่วงเติบโตแรกของ Ookbee ร้านหนังสือ e-book ชั้นนำของไทย",
-          "สร้างและดูแลฟีเจอร์ของแอป iOS และ Android"
+          {
+            "en": "Joined during Ookbee's early growth as Thailand's leading e-book store.",
+            "th": "เข้าร่วมช่วงเติบโตแรกของ Ookbee ร้านหนังสือ e-book ชั้นนำของไทย"
+          },
+          {
+            "en": "Built and maintained features for its iOS and Android apps.",
+            "th": "สร้างและดูแลฟีเจอร์ของแอป iOS และ Android"
+          }
         ]
       }
     ],
-    "tech": ["iOS", "Android"]
+    "tech": [
+      "iOS",
+      "Android"
+    ]
   },
   {
     "id": "mic",
@@ -202,22 +443,44 @@
     "start": "2010",
     "end": "2011",
     "role": "Developer (C# .NET)",
-    "company": "Microsoft Innovation Center",
-    "unit": "กรุงเทพฯ",
+    "company": {
+      "en": "Microsoft Innovation Center",
+      "th": "Microsoft Innovation Center"
+    },
+    "unit": {
+      "en": "Bangkok",
+      "th": "กรุงเทพฯ"
+    },
     "phase": "dev",
-    "areas": ["fullstack"],
+    "areas": [
+      "fullstack"
+    ],
     "highlight": false,
-    "summary": "ส่วนหนึ่งของเครือข่าย Microsoft ที่สนับสนุนนักพัฒนาซอฟต์แวร์ในประเทศ",
+    "summary": {
+      "en": "Part of Microsoft's network supporting local software developers",
+      "th": "ส่วนหนึ่งของเครือข่าย Microsoft ที่สนับสนุนนักพัฒนาซอฟต์แวร์ในประเทศ"
+    },
     "groups": [
       {
-        "title": "",
+        "title": {
+          "en": "",
+          "th": ""
+        },
         "items": [
-          "ส่วนหนึ่งของเครือข่ายระดับโลกของ Microsoft ที่สนับสนุนนักพัฒนาซอฟต์แวร์ท้องถิ่น",
-          "พัฒนาแอปพลิเคชันด้วย C# และ .NET และจบ developer program"
+          {
+            "en": "Part of Microsoft's global network supporting local software developers.",
+            "th": "ส่วนหนึ่งของเครือข่ายระดับโลกของ Microsoft ที่สนับสนุนนักพัฒนาซอฟต์แวร์ท้องถิ่น"
+          },
+          {
+            "en": "Developed C# and .NET applications and completed the developer program.",
+            "th": "พัฒนาแอปพลิเคชันด้วย C# และ .NET และจบ developer program"
+          }
         ]
       }
     ],
-    "tech": ["C# / .NET"]
+    "tech": [
+      "C# / .NET"
+    ]
   },
   {
     "id": "beng",
@@ -225,12 +488,23 @@
     "start": "2010",
     "end": "2010",
     "role": "B.Eng. in Computer Engineering",
-    "company": "มหาวิทยาลัยขอนแก่น",
-    "unit": "GPA 3.07 / 4.00",
+    "company": {
+      "en": "Khon Kaen University",
+      "th": "มหาวิทยาลัยขอนแก่น"
+    },
+    "unit": {
+      "en": "GPA 3.07 / 4.00",
+      "th": "GPA 3.07 / 4.00"
+    },
     "phase": "study",
-    "areas": ["fullstack"],
+    "areas": [
+      "fullstack"
+    ],
     "highlight": false,
-    "summary": "ปริญญาตรีวิศวกรรมคอมพิวเตอร์",
+    "summary": {
+      "en": "Bachelor of Engineering in Computer Engineering",
+      "th": "ปริญญาตรีวิศวกรรมคอมพิวเตอร์"
+    },
     "groups": [],
     "tech": []
   }
