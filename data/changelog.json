@@ -1,12 +1,32 @@
 [
   {
     "date": "2026-10-23",
-    "title": { "en": "English version, TH/EN toggle and profile photo", "th": "เพิ่มฉบับภาษาอังกฤษ ปุ่มสลับ TH/EN และรูปโปรไฟล์" },
-    "detail": { "en": "English is now the default; the Thai version lives at /th/.", "th": "ภาษาอังกฤษเป็นค่าเริ่มต้น ฉบับภาษาไทยอยู่ที่ /th/" }
+    "title": {
+      "en": "Résumé download",
+      "th": "เพิ่มปุ่มดาวน์โหลด Resume"
+    },
+    "detail": {
+      "en": "PDF résumé with the phone number removed.",
+      "th": "Resume ฉบับ PDF ที่ตัดเบอร์โทรออก"
+    }
+  },
+  {
+    "date": "2026-10-23",
+    "title": {
+      "en": "English version, TH/EN toggle and profile photo",
+      "th": "เพิ่มฉบับภาษาอังกฤษ ปุ่มสลับ TH/EN และรูปโปรไฟล์"
+    },
+    "detail": {
+      "en": "English is now the default; the Thai version lives at /th/.",
+      "th": "ภาษาอังกฤษเป็นค่าเริ่มต้น ฉบับภาษาไทยอยู่ที่ /th/"
+    }
   },
   {
     "date": "2026-10-22",
-    "title": { "en": "Redesign from the 2026 resume", "th": "ปรับเว็บใหม่ตาม Resume 2026" },
+    "title": {
+      "en": "Redesign from the 2026 resume",
+      "th": "ปรับเว็บใหม่ตาม Resume 2026"
+    },
     "detail": {
       "en": "Content from the latest resume, laid out as one page: focus, overview, journey, experience, projects and stack over time, with a new design.",
       "th": "เนื้อหาจาก Resume ล่าสุด จัดวางเป็นหน้าเดียว: ความสนใจ ภาพรวม เส้นทาง ประสบการณ์ ผลงาน และเทคโนโลยีที่ผ่านมา พร้อมดีไซน์ใหม่"
@@ -14,9 +34,35 @@
   },
   {
     "date": "2026-10-10",
-    "title": { "en": "Moved the site to Next.js with JSON content", "th": "ย้ายเว็บไปใช้ Next.js + ข้อมูล JSON" },
-    "detail": { "en": "Content split into JSON files under data/ and deployed by GitHub Actions.", "th": "แยกเนื้อหาเป็นไฟล์ JSON ใน data/ และ deploy ด้วย GitHub Actions" }
+    "title": {
+      "en": "Moved the site to Next.js with JSON content",
+      "th": "ย้ายเว็บไปใช้ Next.js + ข้อมูล JSON"
+    },
+    "detail": {
+      "en": "Content split into JSON files under data/ and deployed by GitHub Actions.",
+      "th": "แยกเนื้อหาเป็นไฟล์ JSON ใน data/ และ deploy ด้วย GitHub Actions"
+    }
   },
-  { "date": "2026-10-10", "title": { "en": "Switched the font to Kanit", "th": "เปลี่ยนฟอนต์เป็น Kanit" }, "detail": { "en": "", "th": "" } },
-  { "date": "2026-10-10", "title": { "en": "First portfolio site", "th": "เปิดเว็บ Portfolio ครั้งแรก" }, "detail": { "en": "", "th": "" } }
+  {
+    "date": "2026-10-10",
+    "title": {
+      "en": "Switched the font to Kanit",
+      "th": "เปลี่ยนฟอนต์เป็น Kanit"
+    },
+    "detail": {
+      "en": "",
+      "th": ""
+    }
+  },
+  {
+    "date": "2026-10-10",
+    "title": {
+      "en": "First portfolio site",
+      "th": "เปิดเว็บ Portfolio ครั้งแรก"
+    },
+    "detail": {
+      "en": "",
+      "th": ""
+    }
+  }
 ]

@@ -46,6 +46,10 @@ test("profile photo exists", () => {
   assert.ok(existsSync(new URL(`../public${profile.photo.src}`, import.meta.url)), `public${profile.photo.src} is missing`);
 });
 
+test("resume PDF exists", () => {
+  assert.ok(existsSync(new URL(`../public${profile.resume.src}`, import.meta.url)), `public${profile.resume.src} is missing`);
+});
+
 test("profile has the required fields", () => {
   for (const k of ["name", "headline", "focusLine"]) nonEmpty(profile[k], `profile.${k}`);
   assert.ok(profile.bio.length > 0 && profile.summary.length > 0, "profile needs bio and summary");

@@ -44,7 +44,10 @@ export function HomePage({ locale }: { locale: Locale }) {
                 {s.contactMe}
               </a>
             )}
-            <a className="btn" href="#projects">
+            <a className="btn" href={`${base}${profile.resume.src}`} download>
+              {s.resume}
+            </a>
+            <a className="btn btn--ghost" href="#projects">
               {s.seeProjects}
             </a>
           </div>
@@ -266,6 +269,12 @@ export function HomePage({ locale }: { locale: Locale }) {
                 {s.contact.after}
               </p>
               <ul className="contacts">
+                <li>
+                  <span className="label">{s.resumeLabel}</span>
+                  <a href={`${base}${profile.resume.src}`} download>
+                    PDF · {profile.resume.size} ↓
+                  </a>
+                </li>
                 {profile.contacts.map((c) => (
                   <li key={c.label}>
                     <span className="label">{c.label}</span>

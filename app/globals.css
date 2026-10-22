@@ -324,6 +324,12 @@ h1 {
   color: var(--bg);
 }
 
+.btn--ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--accent);
+}
+
 .btn--primary:hover {
   border-color: var(--ink);
   opacity: 0.9;
