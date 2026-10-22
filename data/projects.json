@@ -1,92 +1,234 @@
 [
   {
     "slug": "agent-harness",
-    "title": "Agent harness รอบ Claude Code",
-    "context": "Jaidee Innovation · 2025 – ปัจจุบัน",
-    "summary": "ชุดเครื่องมือที่ให้ AI agent ทุกตัวในทุกโปรเจกต์ทำงานด้วย context, guardrail และ quality gate เดียวกัน",
-    "problem": "agent ทำผิดแบบเดิมซ้ำ ๆ เมื่อไม่มี context และกติกาที่ใช้ร่วมกัน",
+    "title": {
+      "en": "Agent harness around Claude Code",
+      "th": "Agent harness รอบ Claude Code"
+    },
+    "context": {
+      "en": "Jaidee Innovation · 2025 – present",
+      "th": "Jaidee Innovation · 2025 – ปัจจุบัน"
+    },
+    "summary": {
+      "en": "Tooling that gives every AI agent on every project the same context, guardrails, and quality gates",
+      "th": "ชุดเครื่องมือที่ให้ AI agent ทุกตัวในทุกโปรเจกต์ทำงานด้วย context, guardrail และ quality gate เดียวกัน"
+    },
+    "problem": {
+      "en": "Agents repeat the same mistakes when they have no shared context or rules",
+      "th": "agent ทำผิดแบบเดิมซ้ำ ๆ เมื่อไม่มี context และกติกาที่ใช้ร่วมกัน"
+    },
     "built": [
-      "CLAUDE.md rules, skills, hooks และ MCP tools ที่ทุก agent อ่านร่วมกัน",
-      "subagent สำหรับ implement, review และ test ทำงานคู่ขนานบน git worktrees ภายใต้สิทธิ์ที่จำกัดขอบเขต",
-      "quality gate: unit / E2E test, eval set ของผลลัพธ์ AI, AI observability และด่าน deploy production ที่คนกดเอง",
-      "template repo: คำสั่งเดียวสร้างโปรเจกต์ใหม่พร้อม base rules และ git policy"
+      {
+        "en": "CLAUDE.md rules, skills, hooks, and MCP tools shared by every agent",
+        "th": "CLAUDE.md rules, skills, hooks และ MCP tools ที่ทุก agent อ่านร่วมกัน"
+      },
+      {
+        "en": "Subagents for implement, review, and test running in parallel across git worktrees under scoped permissions",
+        "th": "subagent สำหรับ implement, review และ test ทำงานคู่ขนานบน git worktrees ภายใต้สิทธิ์ที่จำกัดขอบเขต"
+      },
+      {
+        "en": "Quality gates: unit / E2E tests, eval sets for AI output, AI observability, and a manual production deploy gate",
+        "th": "quality gate: unit / E2E test, eval set ของผลลัพธ์ AI, AI observability และด่าน deploy production ที่คนกดเอง"
+      },
+      {
+        "en": "Template repo: one command scaffolds a new project with base rules and git policy",
+        "th": "template repo: คำสั่งเดียวสร้างโปรเจกต์ใหม่พร้อม base rules และ git policy"
+      }
     ],
-    "outcome": "ความผิดพลาดที่ AI ทำซ้ำถูกเปลี่ยนเป็น context และ guardrail ที่ใช้ซ้ำได้ทุกโปรเจกต์",
+    "outcome": {
+      "en": "Recurring AI mistakes become reusable context and guardrails across projects",
+      "th": "ความผิดพลาดที่ AI ทำซ้ำถูกเปลี่ยนเป็น context และ guardrail ที่ใช้ซ้ำได้ทุกโปรเจกต์"
+    },
     "link": null,
-    "tech": ["Claude Code", "MCP", "git worktrees", "E2E testing", "CI/CD"]
+    "tech": [
+      "Claude Code",
+      "MCP",
+      "git worktrees",
+      "E2E testing",
+      "CI/CD"
+    ]
   },
   {
     "slug": "covera",
-    "title": "Covera — AI SaaS สำหรับตัวแทนประกันไทย",
-    "context": "Jaidee Innovation · 2025 – ปัจจุบัน",
-    "summary": "ผู้ช่วย AI สำหรับตัวแทนประกัน ตอบคำถามกรมธรรม์จากเอกสารประกันภาษาไทย พร้อมเครื่องมือวางแผนการเงินและติดตามลูกค้า",
-    "problem": "คำตอบเรื่องกรมธรรม์ต้องถูกต้องและตรวจสอบได้ และการขายประกันต้องผ่านเกณฑ์ PDPA และ suitability",
+    "title": {
+      "en": "Covera — AI SaaS for Thai insurance agents",
+      "th": "Covera — AI SaaS สำหรับตัวแทนประกันไทย"
+    },
+    "context": {
+      "en": "Jaidee Innovation · 2025 – present",
+      "th": "Jaidee Innovation · 2025 – ปัจจุบัน"
+    },
+    "summary": {
+      "en": "An AI assistant for insurance agents that answers policy questions from Thai insurance documents, with financial-planning and client follow-up tools",
+      "th": "ผู้ช่วย AI สำหรับตัวแทนประกัน ตอบคำถามกรมธรรม์จากเอกสารประกันภาษาไทย พร้อมเครื่องมือวางแผนการเงินและติดตามลูกค้า"
+    },
+    "problem": {
+      "en": "Policy answers must be accurate and verifiable, and insurance sales must pass PDPA and suitability checks",
+      "th": "คำตอบเรื่องกรมธรรม์ต้องถูกต้องและตรวจสอบได้ และการขายประกันต้องผ่านเกณฑ์ PDPA และ suitability"
+    },
     "built": [
-      "RAG pipeline: PDF ingestion, MongoDB Atlas Vector Search, OpenAI embeddings และ Claude Sonnet พร้อม citation-enforced validation",
-      "OCR สแกนกรมธรรม์ และโมดูลวางแผนการเงิน (needs analysis, คำนวณช่องว่างความคุ้มครอง)",
-      "AI assistant ที่มีด่าน PDPA consent และ suitability test อยู่ใน workflow",
-      "PWA ที่ติดตั้งบน iPad ได้เหมือนแอป native"
+      {
+        "en": "RAG pipeline: PDF ingestion, MongoDB Atlas Vector Search, OpenAI embeddings, and Claude Sonnet with citation-enforced validation",
+        "th": "RAG pipeline: PDF ingestion, MongoDB Atlas Vector Search, OpenAI embeddings และ Claude Sonnet พร้อม citation-enforced validation"
+      },
+      {
+        "en": "OCR policy scanning and a financial-planning module (needs analysis, coverage-gap calculation)",
+        "th": "OCR สแกนกรมธรรม์ และโมดูลวางแผนการเงิน (needs analysis, คำนวณช่องว่างความคุ้มครอง)"
+      },
+      {
+        "en": "AI assistant with PDPA consent and suitability-test gates built into the workflow",
+        "th": "AI assistant ที่มีด่าน PDPA consent และ suitability test อยู่ใน workflow"
+      },
+      {
+        "en": "Installable PWA with a native-feeling iPad experience",
+        "th": "PWA ที่ติดตั้งบน iPad ได้เหมือนแอป native"
+      }
     ],
-    "outcome": "ทุกคำตอบของ AI ตรวจย้อนถึงแหล่งที่มาในเอกสารได้",
-    "link": { "label": "covera.jaidee-innovation.com", "url": "https://covera.jaidee-innovation.com" },
-    "tech": ["Nuxt 3", "TypeScript", "MongoDB Atlas Vector Search", "OpenAI embeddings", "Claude Sonnet", "Vercel", "PWA"]
+    "outcome": {
+      "en": "Every AI answer is traceable to its source in the documents",
+      "th": "ทุกคำตอบของ AI ตรวจย้อนถึงแหล่งที่มาในเอกสารได้"
+    },
+    "link": {
+      "label": "covera.jaidee-innovation.com",
+      "url": "https://covera.jaidee-innovation.com"
+    },
+    "tech": [
+      "Nuxt 3",
+      "TypeScript",
+      "MongoDB Atlas Vector Search",
+      "OpenAI embeddings",
+      "Claude Sonnet",
+      "Vercel",
+      "PWA"
+    ]
   },
   {
     "slug": "cosmate",
-    "title": "Cosmate — ระบบบริหารคลินิกความงาม",
-    "context": "Jaidee Innovation · แพลตฟอร์มลูกค้า",
-    "summary": "SaaS สำหรับคลินิกความงาม: ประวัติคนไข้, การจอง, แพ็กเกจการรักษา, POS และการเรียกเก็บเงิน, คลังสินค้า และรายงานค่าคอมมิชชันพนักงาน",
+    "title": {
+      "en": "Cosmate — cosmetic clinic management",
+      "th": "Cosmate — ระบบบริหารคลินิกความงาม"
+    },
+    "context": {
+      "en": "Jaidee Innovation · client platform",
+      "th": "Jaidee Innovation · แพลตฟอร์มลูกค้า"
+    },
+    "summary": {
+      "en": "Clinic-management SaaS for cosmetic clinics: patient records, booking, treatment packages, POS and billing, inventory, and staff commission reporting",
+      "th": "SaaS สำหรับคลินิกความงาม: ประวัติคนไข้, การจอง, แพ็กเกจการรักษา, POS และการเรียกเก็บเงิน, คลังสินค้า และรายงานค่าคอมมิชชันพนักงาน"
+    },
     "problem": null,
     "built": [],
     "outcome": null,
     "link": null,
-    "tech": ["CI/CD", "AWS"]
+    "tech": [
+      "CI/CD",
+      "AWS"
+    ]
   },
   {
     "slug": "environment-platform",
-    "title": "Environment Platform",
-    "context": "Jaidee Innovation · แพลตฟอร์มลูกค้า",
-    "summary": "Marketplace สำหรับบริการด้านสิ่งแวดล้อม พร้อม CI/CD และโครงสร้างบน AWS",
+    "title": {
+      "en": "Environment Platform",
+      "th": "Environment Platform"
+    },
+    "context": {
+      "en": "Jaidee Innovation · client platform",
+      "th": "Jaidee Innovation · แพลตฟอร์มลูกค้า"
+    },
+    "summary": {
+      "en": "A marketplace for environmental services, with CI/CD and AWS infrastructure",
+      "th": "Marketplace สำหรับบริการด้านสิ่งแวดล้อม พร้อม CI/CD และโครงสร้างบน AWS"
+    },
     "problem": null,
     "built": [],
     "outcome": null,
     "link": null,
-    "tech": ["Vue 3", "NestJS", "AWS"]
+    "tech": [
+      "Vue 3",
+      "NestJS",
+      "AWS"
+    ]
   },
   {
     "slug": "paco",
-    "title": "PACO — payment gateway สำหรับธนาคาร",
-    "context": "2C2P · 2021 – 2023",
-    "summary": "แอป payment gateway ที่ธนาคารใช้ ดูแลทั้งการพัฒนาฟีเจอร์และ performance ของ payment flow ที่ใช้งานจริง",
+    "title": {
+      "en": "PACO — payment gateway for banks",
+      "th": "PACO — payment gateway สำหรับธนาคาร"
+    },
+    "context": {
+      "en": "2C2P · 2021 – 2023",
+      "th": "2C2P · 2021 – 2023"
+    },
+    "summary": {
+      "en": "A payment-gateway application used by banks; I built features and owned the performance of live payment flows",
+      "th": "แอป payment gateway ที่ธนาคารใช้ ดูแลทั้งการพัฒนาฟีเจอร์และ performance ของ payment flow ที่ใช้งานจริง"
+    },
     "problem": null,
     "built": [
-      "Angular + .NET 6 บน MySQL และ DynamoDB พร้อม Elasticsearch",
-      "เชื่อม AWS Lambda, ECS และ Batch"
+      {
+        "en": "Angular + .NET 6 on MySQL and DynamoDB, with Elasticsearch",
+        "th": "Angular + .NET 6 บน MySQL และ DynamoDB พร้อม Elasticsearch"
+      },
+      {
+        "en": "Integrated AWS Lambda, ECS, and Batch",
+        "th": "เชื่อม AWS Lambda, ECS และ Batch"
+      }
     ],
     "outcome": null,
     "link": null,
-    "tech": ["Angular", ".NET 6", "DynamoDB", "Elasticsearch", "AWS"]
+    "tech": [
+      "Angular",
+      ".NET 6",
+      "DynamoDB",
+      "Elasticsearch",
+      "AWS"
+    ]
   },
   {
     "slug": "kma",
-    "title": "KMA — แอป mobile banking ของกรุงศรี",
-    "context": "Krungsri Nimble · 2023 – 2025",
-    "summary": "พัฒนาฟีเจอร์ของแอปธนาคารที่มีผู้ใช้จริง ตามมาตรฐานโค้ดและความปลอดภัยระดับธนาคาร",
+    "title": {
+      "en": "KMA — Krungsri mobile banking",
+      "th": "KMA — แอป mobile banking ของกรุงศรี"
+    },
+    "context": {
+      "en": "Krungsri Nimble · 2023 – 2025",
+      "th": "Krungsri Nimble · 2023 – 2025"
+    },
+    "summary": {
+      "en": "Built features for a live banking app to bank-grade coding and security standards",
+      "th": "พัฒนาฟีเจอร์ของแอปธนาคารที่มีผู้ใช้จริง ตามมาตรฐานโค้ดและความปลอดภัยระดับธนาคาร"
+    },
     "problem": null,
     "built": [],
     "outcome": null,
     "link": null,
-    "tech": ["Flutter", "C# / .NET", "REST APIs"]
+    "tech": [
+      "Flutter",
+      "C# / .NET",
+      "REST APIs"
+    ]
   },
   {
     "slug": "insurance-ops",
-    "title": "Dashboard งานปฏิบัติการประกันภัย",
-    "context": "BlueVenture Group · 2017 – 2021",
-    "summary": "เครื่องมือที่เจ้าหน้าที่บริษัทประกันใช้อนุมัติเคลม ตรวจสอบ นัดซ่อม และติดตามความพึงพอใจต่ออู่ พร้อม API ที่เชื่อมกับบริษัทประกันพันธมิตร",
+    "title": {
+      "en": "Insurance operations dashboard",
+      "th": "Dashboard งานปฏิบัติการประกันภัย"
+    },
+    "context": {
+      "en": "BlueVenture Group · 2017 – 2021",
+      "th": "BlueVenture Group · 2017 – 2021"
+    },
+    "summary": {
+      "en": "The tool insurer officers use for claim approval, verification, repair scheduling, and garage-satisfaction tracking, with APIs to partner insurers",
+      "th": "เครื่องมือที่เจ้าหน้าที่บริษัทประกันใช้อนุมัติเคลม ตรวจสอบ นัดซ่อม และติดตามความพึงพอใจต่ออู่ พร้อม API ที่เชื่อมกับบริษัทประกันพันธมิตร"
+    },
     "problem": null,
     "built": [],
     "outcome": null,
     "link": null,
-    "tech": ["Angular", ".NET Core"]
+    "tech": [
+      "Angular",
+      ".NET Core"
+    ]
   }
 ]

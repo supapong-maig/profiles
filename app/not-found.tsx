@@ -1,20 +1,17 @@
 import Link from "next/link";
-import { SiteFooter } from "@/components/SiteFooter";
-import { SiteHeader } from "@/components/SiteHeader";
+import { SiteShell } from "@/components/SiteShell";
+import { ui } from "@/lib/i18n";
 
 export default function NotFound() {
+  const s = ui.en.notFound;
   return (
-    <>
-      <SiteHeader />
-      <main className="main shell narrow">
-        <div className="page-intro">
-          <h1>ไม่พบหน้านี้</h1>
-          <p className="lead">
-            ลองกลับไปที่ <Link href="/">หน้าแรก</Link>
-          </p>
-        </div>
-      </main>
-      <SiteFooter />
-    </>
+    <SiteShell locale="en">
+      <div className="shell narrow page-intro">
+        <h1>{s.title}</h1>
+        <p className="lede">
+          <Link href="/">{s.back}</Link>
+        </p>
+      </div>
+    </SiteShell>
   );
 }

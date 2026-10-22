@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { toc } from "@/lib/toc";
+
+type Toc = { group: string; items: { id: string; label: string }[] }[];
 
 /** Sticky table of contents that highlights the section currently in view. */
-export function Rail() {
+export function Rail({ toc, label }: { toc: Toc; label: string }) {
   const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
@@ -19,10 +20,10 @@ export function Rail() {
     );
     els.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, [toc]);
 
   return (
-    <aside className="rail" aria-label="สารบัญ">
+    <aside className="rail" aria-label={label}>
       <nav>
         {toc.map((g) => (
           <div key={g.group} className="rail__group">

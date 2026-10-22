@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 
 const load = (name) => JSON.parse(readFileSync(new URL(`../data/${name}.json`, import.meta.url), "utf8"));
 
@@ -21,8 +21,33 @@ const stack = load("stack");
 const credentials = load("credentials");
 const changelog = load("changelog");
 
+/** Walks a JSON value and yields every { en, th } pair with its path. */
+function* localized(value, path) {
+  if (Array.isArray(value)) {
+    for (const [i, v] of value.entries()) yield* localized(v, `${path}[${i}]`);
+  } else if (value && typeof value === "object") {
+    const keys = Object.keys(value).sort().join(",");
+    if (keys === "en,th") yield [path, value];
+    else for (const [k, v] of Object.entries(value)) yield* localized(v, `${path}.${k}`);
+  }
+}
+
+test("every translated string has both English and Thai", () => {
+  const files = { profile, focus, journey, experience, areas, projects, stack, credentials, changelog };
+  for (const [name, data] of Object.entries(files)) {
+    for (const [path, { en, th }] of localized(data, name)) {
+      assert.ok(typeof en === "string" && typeof th === "string", `${path} must have string en and th`);
+      assert.equal(en.trim() === "", th.trim() === "", `${path}: en and th must both be filled or both be empty`);
+    }
+  }
+});
+
+test("profile photo exists", () => {
+  assert.ok(existsSync(new URL(`../public${profile.photo.src}`, import.meta.url)), `public${profile.photo.src} is missing`);
+});
+
 test("profile has the required fields", () => {
-  for (const k of ["name", "headline", "focusLine", "location", "experienceYears"]) nonEmpty(profile[k], `profile.${k}`);
+  for (const k of ["name", "headline", "focusLine"]) nonEmpty(profile[k], `profile.${k}`);
   assert.ok(profile.bio.length > 0 && profile.summary.length > 0, "profile needs bio and summary");
   assert.match(profile.now.since, PERIOD, "profile.now.since must be YYYY or YYYY-MM");
   assert.ok(profile.contacts.length > 0, "profile.contacts must not be empty");
@@ -46,7 +71,7 @@ test("experience entries are complete, valid and newest first", () => {
     const where = `experience[${i}] (${e.id})`;
     assert.ok(["work", "education"].includes(e.kind), `${where}.kind must be work or education`);
     nonEmpty(e.role, `${where}.role`);
-    nonEmpty(e.company, `${where}.company`);
+    nonEmpty(e.company.en, `${where}.company`);
     assert.match(e.start, PERIOD, `${where}.start must be YYYY or YYYY-MM`);
     if (e.end !== null) {
       assert.match(e.end, PERIOD, `${where}.end must be YYYY, YYYY-MM or null`);
@@ -68,8 +93,8 @@ test("projects have valid slugs and content", () => {
   unique(projects.map((p) => p.slug), "project slugs");
   for (const p of projects) {
     assert.match(p.slug, SLUG, `project slug "${p.slug}" must be kebab-case`);
-    nonEmpty(p.title, `project ${p.slug}.title`);
-    nonEmpty(p.summary, `project ${p.slug}.summary`);
+    nonEmpty(p.title.en, `project ${p.slug}.title`);
+    nonEmpty(p.summary.en, `project ${p.slug}.summary`);
     if (p.link) assert.match(p.link.url, /^https?:/, `project ${p.slug} link must be http(s)`);
   }
 });
@@ -87,7 +112,7 @@ test("credentials are present", () => {
 test("changelog dates are valid and newest first", () => {
   for (const c of changelog) {
     assert.match(c.date, YMD, `changelog date ${c.date} must be YYYY-MM-DD`);
-    nonEmpty(c.title, "changelog.title");
+    nonEmpty(c.title.en, "changelog.title");
   }
   const dates = changelog.map((c) => c.date);
   assert.deepEqual(dates, [...dates].sort().reverse(), "changelog must be sorted newest first");

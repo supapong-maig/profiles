@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { profile } from "@/lib/data";
+import { localePath, ui, type Locale } from "@/lib/i18n";
 
-export function SiteFooter() {
+export function SiteFooter({ locale }: { locale: Locale }) {
   return (
     <footer className="site-footer">
       <div className="shell site-footer__inner">
@@ -9,8 +10,8 @@ export function SiteFooter() {
           © {new Date().getFullYear()} {profile.name}
         </span>
         <span className="site-footer__links">
-          <Link href="/updates/">ประวัติการอัปเดต</Link>
-          <Link href="/architecture/">เกี่ยวกับเว็บนี้</Link>
+          <Link href={localePath("/updates/", locale)}>{ui[locale].footer.updates}</Link>
+          <Link href={localePath("/architecture/", locale)}>{ui[locale].footer.about}</Link>
         </span>
       </div>
     </footer>
