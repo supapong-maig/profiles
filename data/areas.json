@@ -2,7 +2,7 @@
   { "id": "ai", "label": { "en": "AI", "th": "AI" } },
   { "id": "fullstack", "label": { "en": "Full-Stack", "th": "Full-Stack" } },
   { "id": "fintech", "label": { "en": "FinTech", "th": "FinTech" } },
-  { "id": "insurtech", "label": { "en": "Insurtech", "th": "Insurtech" } },
+  { "id": "insurtech", "label": { "en": "InsurTech", "th": "InsurTech" } },
   { "id": "cloud", "label": { "en": "Cloud", "th": "Cloud" } },
   { "id": "mobile", "label": { "en": "Mobile", "th": "มือถือ" } },
   { "id": "data", "label": { "en": "Data", "th": "ข้อมูล" } }
