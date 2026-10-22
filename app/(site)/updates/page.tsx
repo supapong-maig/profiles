@@ -6,8 +6,8 @@ export const metadata: Metadata = { title: "ประวัติการอั
 
 export default function UpdatesPage() {
   return (
-    <>
-      <PageIntro title="ประวัติการอัปเดต" lead="สิ่งที่เปลี่ยนในเว็บนี้ เรียงจากใหม่ไปเก่า" />
+    <div className="shell narrow">
+      <PageIntro kicker="Changelog" title="ประวัติการอัปเดต" lead="สิ่งที่เปลี่ยนในเว็บนี้ เรียงจากใหม่ไปเก่า" />
       <ul className="changelog">
         {changelog.map((c) => (
           <li key={`${c.date}-${c.title}`}>
@@ -19,6 +19,6 @@ export default function UpdatesPage() {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }

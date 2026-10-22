@@ -4,77 +4,91 @@ import { readFileSync } from "node:fs";
 
 const load = (name) => JSON.parse(readFileSync(new URL(`../data/${name}.json`, import.meta.url), "utf8"));
 
-const YM = /^\d{4}-(0[1-9]|1[0-2])$/;
+const PERIOD = /^\d{4}(-(0[1-9]|1[0-2]))?$/;
 const YMD = /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/;
 const SLUG = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
 const nonEmpty = (v, where) => assert.ok(typeof v === "string" && v.trim().length > 0, `${where} must be a non-empty string`);
 const unique = (values, what) => assert.equal(new Set(values).size, values.length, `${what} must be unique`);
-const assertRange = (start, end, where) => {
-  assert.match(start, YM, `${where}.start must be YYYY-MM`);
-  if (end !== null) {
-    assert.match(end, YM, `${where}.end must be YYYY-MM or null`);
-    assert.ok(start <= end, `${where}: start must not be after end`);
-  }
-};
+
+const profile = load("profile");
+const focus = load("focus");
+const journey = load("journey");
+const experience = load("experience");
+const areas = load("areas");
+const projects = load("projects");
+const stack = load("stack");
+const credentials = load("credentials");
+const changelog = load("changelog");
 
 test("profile has the required fields", () => {
-  const p = load("profile");
-  for (const k of ["name", "headline", "tagline", "summary", "location", "availability"]) nonEmpty(p[k], `profile.${k}`);
-  assert.ok(p.contacts.length > 0, "profile.contacts must not be empty");
-  for (const c of p.contacts) {
-    nonEmpty(c.label, "contact.label");
-    assert.match(c.url, /^(https?:|mailto:)/, `contact ${c.label} url must be http(s) or mailto`);
-  }
+  for (const k of ["name", "headline", "focusLine", "location", "experienceYears"]) nonEmpty(profile[k], `profile.${k}`);
+  assert.ok(profile.bio.length > 0 && profile.summary.length > 0, "profile needs bio and summary");
+  assert.match(profile.now.since, PERIOD, "profile.now.since must be YYYY or YYYY-MM");
+  assert.ok(profile.contacts.length > 0, "profile.contacts must not be empty");
+  for (const c of profile.contacts) assert.match(c.url, /^(https?:|mailto:)/, `contact ${c.label} url must be http(s) or mailto`);
 });
 
-test("experience entries are complete and newest first", () => {
-  const items = load("experience");
-  unique(items.map((e) => e.id), "experience ids");
-  items.forEach((e, i) => {
-    nonEmpty(e.role, `experience[${i}].role`);
-    nonEmpty(e.company, `experience[${i}].company`);
-    assertRange(e.start, e.end, `experience[${i}]`);
-    assert.ok(e.achievements.length > 0, `experience[${i}] needs at least one achievement`);
+test("contacts do not publish a phone number", () => {
+  for (const c of profile.contacts) assert.doesNotMatch(c.url, /^tel:/, "phone numbers stay off the public site");
+});
+
+test("focus and journey ids are unique", () => {
+  unique(focus.map((f) => f.id), "focus ids");
+  unique(journey.map((p) => p.id), "journey ids");
+});
+
+test("experience entries are complete, valid and newest first", () => {
+  unique(experience.map((e) => e.id), "experience ids");
+  const phaseIds = new Set(journey.map((p) => p.id));
+  const areaIds = new Set(areas.map((a) => a.id));
+  experience.forEach((e, i) => {
+    const where = `experience[${i}] (${e.id})`;
+    assert.ok(["work", "education"].includes(e.kind), `${where}.kind must be work or education`);
+    nonEmpty(e.role, `${where}.role`);
+    nonEmpty(e.company, `${where}.company`);
+    assert.match(e.start, PERIOD, `${where}.start must be YYYY or YYYY-MM`);
+    if (e.end !== null) {
+      assert.match(e.end, PERIOD, `${where}.end must be YYYY, YYYY-MM or null`);
+      assert.ok(e.start <= e.end, `${where}: start must not be after end`);
+    }
+    assert.ok(phaseIds.has(e.phase), `${where}.phase "${e.phase}" is not in journey.json`);
+    for (const a of e.areas) assert.ok(areaIds.has(a), `${where} area "${a}" is not in areas.json`);
+    if (e.kind === "work") assert.ok(e.groups.some((g) => g.items.length > 0), `${where} needs at least one bullet`);
   });
-  const starts = items.map((e) => e.start);
+  const starts = experience.map((e) => e.start.slice(0, 4));
   assert.deepEqual(starts, [...starts].sort().reverse(), "experience must be sorted newest first");
 });
 
+test("every journey phase has at least one experience entry", () => {
+  for (const p of journey) assert.ok(experience.some((e) => e.phase === p.id), `phase ${p.id} has no entries`);
+});
+
 test("projects have valid slugs and content", () => {
-  const items = load("projects");
-  unique(items.map((p) => p.slug), "project slugs");
-  for (const p of items) {
+  unique(projects.map((p) => p.slug), "project slugs");
+  for (const p of projects) {
     assert.match(p.slug, SLUG, `project slug "${p.slug}" must be kebab-case`);
     nonEmpty(p.title, `project ${p.slug}.title`);
     nonEmpty(p.summary, `project ${p.slug}.summary`);
-    assertRange(p.start, p.end, `project ${p.slug}`);
-    assert.ok(Number.isInteger(p.teamSize) && p.teamSize > 0, `project ${p.slug}.teamSize must be a positive integer`);
-    for (const l of p.links) assert.match(l.url, /^https?:/, `project ${p.slug} link must be http(s)`);
+    if (p.link) assert.match(p.link.url, /^https?:/, `project ${p.slug} link must be http(s)`);
   }
 });
 
-test("skill levels are 1–3", () => {
-  const s = load("skills");
-  for (const c of s.core) assert.ok([1, 2, 3].includes(c.level), `skill ${c.name} level must be 1, 2 or 3`);
+test("every experience tech belongs to a stack category", () => {
+  const known = new Set(stack.categories.flatMap((c) => c.items));
+  for (const e of experience) for (const t of e.tech) assert.ok(known.has(t), `tech "${t}" (${e.id}) is missing from stack.json categories`);
 });
 
-test("interest statuses are known", () => {
-  const i = load("interests");
-  for (const t of i.now) assert.ok(["seed", "growing", "grown"].includes(t.status), `interest ${t.topic} has unknown status`);
-});
-
-test("services cover every audience once", () => {
-  const s = load("services");
-  assert.deepEqual(s.audiences.map((a) => a.id).sort(), ["collaborators", "employers", "projects"]);
+test("credentials are present", () => {
+  assert.ok(credentials.education.length > 0, "education must not be empty");
+  for (const c of credentials.certifications) nonEmpty(c.name, "certification.name");
 });
 
 test("changelog dates are valid and newest first", () => {
-  const items = load("changelog");
-  for (const c of items) {
+  for (const c of changelog) {
     assert.match(c.date, YMD, `changelog date ${c.date} must be YYYY-MM-DD`);
     nonEmpty(c.title, "changelog.title");
   }
-  const dates = items.map((c) => c.date);
+  const dates = changelog.map((c) => c.date);
   assert.deepEqual(dates, [...dates].sort().reverse(), "changelog must be sorted newest first");
 });

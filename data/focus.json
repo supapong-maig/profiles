@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ai",
+    "en": "AI-Native Development",
+    "th": "กำกับ Claude Code agents ให้สร้าง pull request ที่ merge ได้ คุมคุณภาพด้วย test loop อัตโนมัติ"
+  },
+  {
+    "id": "harness",
+    "en": "Agent Harness Engineering",
+    "th": "CLAUDE.md rules, skills, hooks และ MCP tools ที่ให้ทุก agent มี context และ guardrail เดียวกัน"
+  },
+  {
+    "id": "rag",
+    "en": "RAG & LLM Integration",
+    "th": "RAG บนเอกสารภาษาไทยด้วย vector search และ embeddings ที่ทุกคำตอบตรวจย้อนถึงแหล่งที่มาได้"
+  },
+  {
+    "id": "fullstack",
+    "en": "Full-Stack Development",
+    "th": "React, Vue / Nuxt, Angular บนหน้าบ้าน กับ Node.js / NestJS และ C# / .NET บนหลังบ้าน"
+  },
+  {
+    "id": "fintech",
+    "en": "FinTech & Insurtech",
+    "th": "payment gateway, mobile banking และระบบประกันภัย พร้อมใบอนุญาตตัวแทนประกันชีวิตและ IC"
+  },
+  {
+    "id": "cloud",
+    "en": "Cloud & Quality",
+    "th": "AWS, Vercel, Docker และ CI/CD กับ unit / E2E test automation และการออกแบบที่คำนึงถึงความปลอดภัย"
+  }
+]

@@ -1,36 +1,92 @@
 [
   {
-    "slug": "example-project",
-    "title": "[ชื่อโปรเจกต์]",
-    "summary": "[สรุป 1 บรรทัด: ทำอะไร ให้ใคร ได้ผลอะไร]",
-    "start": "2024-01",
-    "end": "2024-06",
-    "role": "[บทบาทของคุณ]",
-    "teamSize": 4,
-    "type": "งานบริษัท",
-    "featured": true,
-    "tags": ["[Tech 1]", "[Tech 2]"],
-    "links": [{ "label": "Demo", "url": "https://example.com" }],
-    "problem": "[สถานการณ์ก่อนเริ่ม: ใครเจอปัญหาอะไร ส่งผลกระทบอย่างไร]",
-    "actions": ["[การตัดสินใจหรือการลงมือที่สำคัญ 1]", "[2]", "[3]"],
-    "results": ["[ผลลัพธ์เชิงตัวเลข]", "[Feedback จากผู้ใช้ / ลูกค้า]"],
-    "lessons": "[สิ่งที่จะทำต่างออกไปถ้าได้ทำใหม่]"
+    "slug": "agent-harness",
+    "title": "Agent harness รอบ Claude Code",
+    "context": "Jaidee Innovation · 2025 – ปัจจุบัน",
+    "summary": "ชุดเครื่องมือที่ให้ AI agent ทุกตัวในทุกโปรเจกต์ทำงานด้วย context, guardrail และ quality gate เดียวกัน",
+    "problem": "agent ทำผิดแบบเดิมซ้ำ ๆ เมื่อไม่มี context และกติกาที่ใช้ร่วมกัน",
+    "built": [
+      "CLAUDE.md rules, skills, hooks และ MCP tools ที่ทุก agent อ่านร่วมกัน",
+      "subagent สำหรับ implement, review และ test ทำงานคู่ขนานบน git worktrees ภายใต้สิทธิ์ที่จำกัดขอบเขต",
+      "quality gate: unit / E2E test, eval set ของผลลัพธ์ AI, AI observability และด่าน deploy production ที่คนกดเอง",
+      "template repo: คำสั่งเดียวสร้างโปรเจกต์ใหม่พร้อม base rules และ git policy"
+    ],
+    "outcome": "ความผิดพลาดที่ AI ทำซ้ำถูกเปลี่ยนเป็น context และ guardrail ที่ใช้ซ้ำได้ทุกโปรเจกต์",
+    "link": null,
+    "tech": ["Claude Code", "MCP", "git worktrees", "E2E testing", "CI/CD"]
   },
   {
-    "slug": "side-project",
-    "title": "[ชื่อ Side project]",
-    "summary": "[สรุป 1 บรรทัด]",
-    "start": "2025-03",
-    "end": null,
-    "role": "[บทบาท]",
-    "teamSize": 1,
-    "type": "Side project",
-    "featured": true,
-    "tags": ["[Tech]"],
-    "links": [],
-    "problem": "[ปัญหา]",
-    "actions": ["[สิ่งที่ทำ]"],
-    "results": ["[ผลลัพธ์]"],
-    "lessons": "[สิ่งที่ได้เรียนรู้]"
+    "slug": "covera",
+    "title": "Covera — AI SaaS สำหรับตัวแทนประกันไทย",
+    "context": "Jaidee Innovation · 2025 – ปัจจุบัน",
+    "summary": "ผู้ช่วย AI สำหรับตัวแทนประกัน ตอบคำถามกรมธรรม์จากเอกสารประกันภาษาไทย พร้อมเครื่องมือวางแผนการเงินและติดตามลูกค้า",
+    "problem": "คำตอบเรื่องกรมธรรม์ต้องถูกต้องและตรวจสอบได้ และการขายประกันต้องผ่านเกณฑ์ PDPA และ suitability",
+    "built": [
+      "RAG pipeline: PDF ingestion, MongoDB Atlas Vector Search, OpenAI embeddings และ Claude Sonnet พร้อม citation-enforced validation",
+      "OCR สแกนกรมธรรม์ และโมดูลวางแผนการเงิน (needs analysis, คำนวณช่องว่างความคุ้มครอง)",
+      "AI assistant ที่มีด่าน PDPA consent และ suitability test อยู่ใน workflow",
+      "PWA ที่ติดตั้งบน iPad ได้เหมือนแอป native"
+    ],
+    "outcome": "ทุกคำตอบของ AI ตรวจย้อนถึงแหล่งที่มาในเอกสารได้",
+    "link": { "label": "covera.jaidee-innovation.com", "url": "https://covera.jaidee-innovation.com" },
+    "tech": ["Nuxt 3", "TypeScript", "MongoDB Atlas Vector Search", "OpenAI embeddings", "Claude Sonnet", "Vercel", "PWA"]
+  },
+  {
+    "slug": "cosmate",
+    "title": "Cosmate — ระบบบริหารคลินิกความงาม",
+    "context": "Jaidee Innovation · แพลตฟอร์มลูกค้า",
+    "summary": "SaaS สำหรับคลินิกความงาม: ประวัติคนไข้, การจอง, แพ็กเกจการรักษา, POS และการเรียกเก็บเงิน, คลังสินค้า และรายงานค่าคอมมิชชันพนักงาน",
+    "problem": null,
+    "built": [],
+    "outcome": null,
+    "link": null,
+    "tech": ["CI/CD", "AWS"]
+  },
+  {
+    "slug": "environment-platform",
+    "title": "Environment Platform",
+    "context": "Jaidee Innovation · แพลตฟอร์มลูกค้า",
+    "summary": "Marketplace สำหรับบริการด้านสิ่งแวดล้อม พร้อม CI/CD และโครงสร้างบน AWS",
+    "problem": null,
+    "built": [],
+    "outcome": null,
+    "link": null,
+    "tech": ["Vue 3", "NestJS", "AWS"]
+  },
+  {
+    "slug": "paco",
+    "title": "PACO — payment gateway สำหรับธนาคาร",
+    "context": "2C2P · 2021 – 2023",
+    "summary": "แอป payment gateway ที่ธนาคารใช้ ดูแลทั้งการพัฒนาฟีเจอร์และ performance ของ payment flow ที่ใช้งานจริง",
+    "problem": null,
+    "built": [
+      "Angular + .NET 6 บน MySQL และ DynamoDB พร้อม Elasticsearch",
+      "เชื่อม AWS Lambda, ECS และ Batch"
+    ],
+    "outcome": null,
+    "link": null,
+    "tech": ["Angular", ".NET 6", "DynamoDB", "Elasticsearch", "AWS"]
+  },
+  {
+    "slug": "kma",
+    "title": "KMA — แอป mobile banking ของกรุงศรี",
+    "context": "Krungsri Nimble · 2023 – 2025",
+    "summary": "พัฒนาฟีเจอร์ของแอปธนาคารที่มีผู้ใช้จริง ตามมาตรฐานโค้ดและความปลอดภัยระดับธนาคาร",
+    "problem": null,
+    "built": [],
+    "outcome": null,
+    "link": null,
+    "tech": ["Flutter", "C# / .NET", "REST APIs"]
+  },
+  {
+    "slug": "insurance-ops",
+    "title": "Dashboard งานปฏิบัติการประกันภัย",
+    "context": "BlueVenture Group · 2017 – 2021",
+    "summary": "เครื่องมือที่เจ้าหน้าที่บริษัทประกันใช้อนุมัติเคลม ตรวจสอบ นัดซ่อม และติดตามความพึงพอใจต่ออู่ พร้อม API ที่เชื่อมกับบริษัทประกันพันธมิตร",
+    "problem": null,
+    "built": [],
+    "outcome": null,
+    "link": null,
+    "tech": ["Angular", ".NET Core"]
   }
 ]

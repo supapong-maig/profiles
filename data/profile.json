@@ -1,36 +1,30 @@
 {
-  "name": "[ชื่อ นามสกุล]",
-  "nameEn": "[Your Name]",
-  "headline": "[ตำแหน่ง / บทบาทหลัก]",
-  "tagline": "[จุดเด่น 1 บรรทัด เช่น \"ช่วยธุรกิจเปลี่ยนข้อมูลให้เป็นการตัดสินใจ\"]",
-  "summary": "[2–3 ประโยคสรุปตัวเอง: ทำงานด้านอะไร มีประสบการณ์กี่ปี ถนัดเรื่องอะไร และอะไรทำให้คุณแตกต่าง]",
-  "location": "[เมือง, ประเทศ]",
-  "availability": "[เปิดรับงาน Full-time / Freelance / Consult]",
-  "languages": ["ไทย", "English"],
-  "story": [
-    "[เล่าเส้นทางของคุณ: เริ่มต้นจากอะไร เปลี่ยนผ่านอะไรมา]",
-    "[ตอนนี้กำลังมุ่งไปทางไหน และทำไม]"
+  "name": "Supapong Ngonkham",
+  "headline": "Senior Full-Stack Engineer · AI-Native",
+  "focusLine": "AI-Native · Agent Harness · RAG · Full-Stack · FinTech & Insurtech",
+  "bio": [
+    "ผมเป็นวิศวกร Full-Stack ที่ส่งมอบเว็บแอปพลิเคชันขึ้น production มากว่า 15 ปี ในงาน FinTech, payment gateway และประกันภัย พื้นฐานเป็นวิศวกรรมคอมพิวเตอร์ และต่อ MBA ด้านการเงิน จึงเข้าใจทั้งโค้ดและธุรกิจการเงินที่โค้ดนั้นรับใช้",
+    "สองปีหลังผมทำงานแบบ AI-native: กำกับ Claude Code agents ให้สร้าง pull request ที่ merge ได้จริง คุมคุณภาพด้วย test loop อัตโนมัติ และเปลี่ยนความผิดพลาดที่ AI ทำซ้ำ ๆ ให้เป็น context และ guardrail ที่ใช้ซ้ำได้ ล่าสุดออกแบบและสร้าง Covera ตั้งแต่ต้นจนจบ: SaaS ประกันภัยด้วย AI ที่ใช้ RAG บนเอกสารประกันภาษาไทย, OCR และด่าน PDPA"
   ],
-  "values": [
-    { "title": "[ค่านิยม 1]", "desc": "[สะท้อนในการทำงานอย่างไร]" },
-    { "title": "[ค่านิยม 2]", "desc": "[สะท้อนในการทำงานอย่างไร]" },
-    { "title": "[ค่านิยม 3]", "desc": "[สะท้อนในการทำงานอย่างไร]" }
+  "summary": [
+    "วิศวกร Full-Stack ประสบการณ์ 15+ ปี ในงาน FinTech, payment และประกันภัย",
+    "สร้าง agent harness รอบ Claude Code ที่ให้ agent หลายตัวทำงานคู่ขนานภายใต้ guardrail และ quality gate เดียวกัน",
+    "ออกแบบและส่งมอบ Covera ครบวงจร: RAG บนเอกสารประกันภาษาไทยที่ทุกคำตอบอ้างอิงแหล่งที่มาได้"
   ],
-  "workStyle": [
-    { "label": "การสื่อสาร", "desc": "[เช่น เขียนเอกสารให้ชัดก่อนลงมือ อัปเดตสถานะสม่ำเสมอ]" },
-    { "label": "การแก้ปัญหา", "desc": "[เช่น เริ่มจากทำความเข้าใจผู้ใช้และข้อมูลก่อน]" },
-    { "label": "การทำงานเป็นทีม", "desc": "[เช่น เป็นสะพานเชื่อมระหว่างทีม Business กับ Tech]" },
-    { "label": "รูปแบบงานที่สะดวก", "desc": "[Remote / Hybrid / On-site, Timezone]" }
+  "now": { "role": "Senior Full-Stack Engineer (AI-Native)", "company": "Jaidee Innovation Co., Ltd.", "since": "2025-09" },
+  "experienceYears": "15+ ปี",
+  "path": ["วิศวกรรมคอมพิวเตอร์", ".NET และมือถือ", "MBA การเงิน", "FinTech & Insurtech", "AI-Native"],
+  "coreTech": ["Claude Code", "TypeScript", "Nuxt 3", "Vue 3", "React", "Angular", "NestJS", "C# / .NET", "MongoDB Atlas", "AWS", "Vercel"],
+  "location": "กรุงเทพฯ ประเทศไทย",
+  "languages": [
+    { "name": "ไทย", "level": "ภาษาแม่" },
+    { "name": "อังกฤษ", "level": "ใช้งานระดับมืออาชีพ" }
   ],
-  "beyondWork": "[งานอดิเรก กิจกรรมอาสา สิ่งที่ทำให้คุณเป็นคุณ]",
-  "highlights": [
-    "[ผลงานเด่น 1 พร้อมตัวเลข เช่น \"ลดเวลาทำรายงานจาก 3 ชม. เหลือ 10 นาที\"]",
-    "[ผลงานเด่น 2]",
-    "[ผลงานเด่น 3]"
-  ],
+  "interests": ["Agent Harness Engineering", "Full-Stack Development", "FinTech & Insurtech"],
   "contacts": [
-    { "label": "Email", "url": "mailto:your@email.com", "display": "[your@email.com]" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/", "display": "[linkedin.com/in/your-profile]" },
-    { "label": "GitHub", "url": "https://github.com/supapong-maig", "display": "github.com/supapong-maig" }
+    { "label": "Email", "url": "mailto:gfarmfrenzy@gmail.com", "display": "gfarmfrenzy@gmail.com" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/supapong-ngonkham", "display": "linkedin.com/in/supapong-ngonkham" },
+    { "label": "GitHub", "url": "https://github.com/supapong-maig", "display": "github.com/supapong-maig" },
+    { "label": "Covera", "url": "https://covera.jaidee-innovation.com", "display": "covera.jaidee-innovation.com" }
   ]
 }

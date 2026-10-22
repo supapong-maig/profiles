@@ -1,108 +1,92 @@
 import profileJson from "@/data/profile.json";
+import focusJson from "@/data/focus.json";
+import journeyJson from "@/data/journey.json";
 import experienceJson from "@/data/experience.json";
+import areasJson from "@/data/areas.json";
 import projectsJson from "@/data/projects.json";
-import skillsJson from "@/data/skills.json";
-import interestsJson from "@/data/interests.json";
-import servicesJson from "@/data/services.json";
+import stackJson from "@/data/stack.json";
+import credentialsJson from "@/data/credentials.json";
 import changelogJson from "@/data/changelog.json";
 
 export type Link = { label: string; url: string };
 
 export type Profile = {
   name: string;
-  nameEn: string;
   headline: string;
-  tagline: string;
-  summary: string;
+  focusLine: string;
+  bio: string[];
+  summary: string[];
+  now: { role: string; company: string; since: string };
+  experienceYears: string;
+  path: string[];
+  coreTech: string[];
   location: string;
-  availability: string;
-  languages: string[];
-  story: string[];
-  values: { title: string; desc: string }[];
-  workStyle: { label: string; desc: string }[];
-  beyondWork: string;
-  highlights: string[];
+  languages: { name: string; level: string }[];
+  interests: string[];
   contacts: { label: string; url: string; display: string }[];
 };
 
+export type Focus = { id: string; en: string; th: string };
+export type Phase = { id: string; years: string; title: string; desc: string };
+export type Area = { id: string; label: string };
+
 export type Experience = {
   id: string;
-  role: string;
-  company: string;
+  kind: "work" | "education";
+  /** "YYYY-MM" or "YYYY" */
   start: string;
   end: string | null;
-  location: string;
-  industry: string;
-  context: string;
-  achievements: string[];
-  tools: string[];
+  role: string;
+  company: string;
+  unit: string;
+  phase: string;
+  areas: string[];
+  highlight: boolean;
+  summary: string;
+  groups: { title: string; items: string[] }[];
+  tech: string[];
 };
 
 export type Project = {
   slug: string;
   title: string;
+  context: string;
   summary: string;
-  start: string;
-  end: string | null;
-  role: string;
-  teamSize: number;
-  type: string;
-  featured: boolean;
-  tags: string[];
-  links: Link[];
-  problem: string;
-  actions: string[];
-  results: string[];
-  lessons: string;
+  problem: string | null;
+  built: string[];
+  outcome: string | null;
+  link: Link | null;
+  tech: string[];
 };
 
-export type Skills = {
-  core: { name: string; level: 1 | 2 | 3; evidence: string }[];
-  tools: { group: string; items: string[] }[];
-  soft: { name: string; desc: string }[];
-  languages: { name: string; level: string }[];
-  education: { degree: string; school: string; start: string; end: string; note: string }[];
-  certifications: { name: string; issuer: string; year: string; url: string }[];
+export type Stack = {
+  categories: { name: string; items: string[] }[];
+  skills: { group: string; items: string[] }[];
 };
 
-export type InterestStatus = "seed" | "growing" | "grown";
-
-export type Interests = {
-  now: { topic: string; status: InterestStatus; why: string; doing: string; collaborate: string }[];
-  reading: { kind: string; title: string; by: string }[];
-  archive: { topic: string; learned: string }[];
-};
-
-export type AudienceId = "employers" | "collaborators" | "projects";
-
-export type Services = {
-  audiences: { id: AudienceId; label: string; question: string; title: string; intro: string; items: string[] }[];
-  notAFit: string[];
-  contactSteps: string[];
+export type Credentials = {
+  education: { degree: string; school: string; year: string; note: string }[];
+  certifications: { name: string; issuer: string; year: string }[];
 };
 
 export type ChangelogEntry = { date: string; title: string; detail: string };
 
 export const profile = profileJson as Profile;
+export const focus = focusJson as Focus[];
+export const journey = journeyJson as Phase[];
 export const experience = experienceJson as Experience[];
+export const areas = areasJson as Area[];
 export const projects = projectsJson as Project[];
-export const skills = skillsJson as Skills;
-export const interests = interestsJson as Interests;
-export const services = servicesJson as Services;
+export const stack = stackJson as Stack;
+export const credentials = credentialsJson as Credentials;
 export const changelog = changelogJson as ChangelogEntry[];
 
-export const featuredProjects = projects.filter((p) => p.featured);
+const monthFmt = new Intl.DateTimeFormat("th-TH-u-ca-gregory", { month: "short", year: "numeric", timeZone: "UTC" });
+const dayFmt = new Intl.DateTimeFormat("th-TH-u-ca-gregory", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
 
-export function getProject(slug: string) {
-  return projects.find((p) => p.slug === slug);
-}
-
-const monthFmt = new Intl.DateTimeFormat("th-TH-u-ca-gregory", { month: "short", year: "numeric" });
-const dayFmt = new Intl.DateTimeFormat("th-TH-u-ca-gregory", { day: "numeric", month: "short", year: "numeric" });
-
-/** "2024-03" → "มี.ค. 2024" */
-export function formatMonth(ym: string) {
-  return monthFmt.format(new Date(`${ym}-01T00:00:00Z`));
+/** "2024-03" → "มี.ค. 2024", "2016" → "2016" */
+export function formatMonth(value: string) {
+  return value.length === 4 ? value : monthFmt.format(new Date(`${value}-01T00:00:00Z`));
 }
 
 /** "2026-10-10" → "10 ต.ค. 2026" */
@@ -111,11 +95,31 @@ export function formatDate(ymd: string) {
 }
 
 export function formatRange(start: string, end: string | null) {
+  if (end === start) return formatMonth(start);
   return `${formatMonth(start)} – ${end ? formatMonth(end) : "ปัจจุบัน"}`;
 }
 
-export const interestStatusLabel: Record<InterestStatus, string> = {
-  seed: "🌱 เพิ่งเริ่มศึกษา",
-  growing: "🌿 กำลังลงมือทดลอง",
-  grown: "🌳 มีประสบการณ์จริง",
-};
+/**
+ * Technology used in each journey phase, grouped by stack category.
+ * A tech is marked `carried` when an earlier phase already used it.
+ */
+export function stackByPhase() {
+  const categoryOf = new Map<string, string>();
+  for (const c of stack.categories) for (const t of c.items) categoryOf.set(t, c.name);
+
+  const seen = new Set<string>();
+  const oldestFirst = [...journey];
+  const rows = oldestFirst.map((phase) => {
+    const techs = new Set(experience.filter((e) => e.phase === phase.id).flatMap((e) => e.tech));
+    const byCategory = stack.categories
+      .map((c) => ({
+        category: c.name,
+        items: c.items.filter((t) => techs.has(t)).map((t) => ({ name: t, carried: seen.has(t) })),
+      }))
+      .filter((c) => c.items.length > 0);
+    techs.forEach((t) => seen.add(t));
+    const uncategorised = [...techs].filter((t) => !categoryOf.has(t));
+    return { phase, byCategory, uncategorised };
+  });
+  return rows.reverse();
+}
