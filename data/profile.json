@@ -33,7 +33,7 @@
     { "en": "Computer engineering", "th": "วิศวกรรมคอมพิวเตอร์" },
     { "en": ".NET and mobile", "th": ".NET และมือถือ" },
     { "en": "MBA in finance", "th": "MBA การเงิน" },
-    { "en": "FinTech & Insurtech", "th": "FinTech & Insurtech" },
+    { "en": "FinTech & InsurTech", "th": "FinTech & InsurTech" },
     { "en": "AI-Native", "th": "AI-Native" }
   ],
   "coreTech": ["Claude Code", "TypeScript", "Nuxt 3", "Vue 3", "React", "Angular", "NestJS", "C# / .NET", "MongoDB Atlas", "AWS", "Vercel"],
@@ -42,7 +42,7 @@
     { "name": { "en": "Thai", "th": "ไทย" }, "level": { "en": "native", "th": "ภาษาแม่" } },
     { "name": { "en": "English", "th": "อังกฤษ" }, "level": { "en": "professional", "th": "ใช้งานระดับมืออาชีพ" } }
   ],
-  "interests": ["Agent Harness Engineering", "Full-Stack Development", "FinTech & Insurtech"],
+  "interests": ["Agent Harness Engineering", "Full-Stack Development", "FinTech & InsurTech"],
   "contacts": [
     { "label": "Email", "url": "mailto:gfarmfrenzy@gmail.com", "display": "gfarmfrenzy@gmail.com" },
     { "label": "LinkedIn", "url": "https://www.linkedin.com/in/supapong-ngonkham", "display": "linkedin.com/in/supapong-ngonkham" },
