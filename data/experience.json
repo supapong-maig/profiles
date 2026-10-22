@@ -1,30 +1,237 @@
 [
   {
-    "id": "current-role",
-    "role": "[ตำแหน่ง]",
-    "company": "[ชื่อบริษัท]",
-    "start": "2023-01",
+    "id": "jaidee",
+    "kind": "work",
+    "start": "2025-09",
     "end": null,
-    "location": "[เมือง / Remote]",
-    "industry": "[อุตสาหกรรม]",
-    "context": "[บริษัททำอะไร ทีมมีกี่คน คุณรับผิดชอบส่วนไหน]",
-    "achievements": [
-      "[ผลลัพธ์ 1 พร้อมตัวเลข: ทำอะไร + ด้วยวิธีอะไร + ได้ผลเท่าไร]",
-      "[ผลลัพธ์ 2 พร้อมตัวเลข]",
-      "[ผลลัพธ์ 3]"
+    "role": "Senior Full-Stack Engineer (AI-Native)",
+    "company": "Jaidee Innovation Co., Ltd.",
+    "unit": "กรุงเทพฯ",
+    "phase": "ai",
+    "areas": ["ai", "fullstack", "insurtech", "cloud"],
+    "highlight": true,
+    "summary": "สร้าง agent harness ที่ใช้ซ้ำได้ทุกโปรเจกต์ ออกแบบและส่งมอบ Covera และดูแลแพลตฟอร์มของลูกค้า",
+    "groups": [
+      {
+        "title": "Agent harness — ใช้ซ้ำได้ทุกโปรเจกต์",
+        "items": [
+          "สร้าง agent harness ส่วนตัวรอบ Claude Code: CLAUDE.md rules, skills, hooks และ MCP tools ให้ทุก agent มี context และ guardrail ร่วมกัน",
+          "Subagent สำหรับ implement, review และ test ทำงานคู่ขนานบน git worktrees ถูก orchestrate อัตโนมัติภายใต้สิทธิ์ที่จำกัดขอบเขต",
+          "Quality gate: unit / E2E test อัตโนมัติ, eval set สำหรับผลลัพธ์ของ AI, AI observability และด่าน deploy production ที่คนกดเอง",
+          "รวมเป็น template repo: คำสั่งเดียวสร้างโปรเจกต์ใหม่ที่ตั้งค่า base rules และ git policy ไว้ครบ"
+        ]
+      },
+      {
+        "title": "Covera — AI SaaS สำหรับตัวแทนประกันไทย",
+        "items": [
+          "รับผิดชอบสถาปัตยกรรมและการส่งมอบครบวงจร (Nuxt 3, TypeScript, MongoDB Atlas, Vercel)",
+          "สร้าง RAG pipeline สำหรับถาม-ตอบกรมธรรม์บนเอกสารประกันภาษาไทย (PDF ingestion, MongoDB Atlas Vector Search, OpenAI embeddings, Claude Sonnet) พร้อม citation-enforced validation ให้ทุกคำตอบตรวจย้อนถึงแหล่งที่มาได้",
+          "ส่งมอบ OCR สแกนกรมธรรม์, โมดูลวางแผนการเงิน (needs analysis, คำนวณช่องว่างความคุ้มครอง) และระบบติดตามลูกค้า",
+          "สร้าง AI assistant สำหรับตัวแทน โดยฝังด่าน PDPA consent และ suitability test ไว้ใน workflow",
+          "ส่งมอบเป็น PWA ที่ติดตั้งได้ ให้ประสบการณ์บน iPad ใกล้เคียงแอป native"
+        ]
+      },
+      {
+        "title": "แพลตฟอร์มของลูกค้า",
+        "items": [
+          "Environment Platform — marketplace บริการด้านสิ่งแวดล้อม (Vue 3, NestJS, AWS)",
+          "Cosmate — SaaS บริหารคลินิกความงาม: ประวัติคนไข้, การจอง, แพ็กเกจการรักษา, POS และการเรียกเก็บเงิน, คลังสินค้า, รายงานค่าคอมมิชชันพนักงาน",
+          "วาง CI/CD pipeline และโครงสร้าง AWS ให้ส่งมอบได้สม่ำเสมอและทำซ้ำได้"
+        ]
+      }
     ],
-    "tools": ["[Tool 1]", "[Tool 2]", "[Tool 3]"]
+    "tech": ["Claude Code", "MCP", "Claude Sonnet", "OpenAI embeddings", "MongoDB Atlas Vector Search", "Nuxt 3", "Vue 3", "TypeScript", "PWA", "NestJS", "MongoDB Atlas", "AWS", "Vercel", "CI/CD", "E2E testing"]
   },
   {
-    "id": "previous-role",
-    "role": "[ตำแหน่ง]",
-    "company": "[ชื่อบริษัท]",
-    "start": "2020-06",
-    "end": "2022-12",
-    "location": "[เมือง / Remote]",
-    "industry": "[อุตสาหกรรม]",
-    "context": "[บริบท 1 ประโยค]",
-    "achievements": ["[ผลลัพธ์ 1]", "[ผลลัพธ์ 2]"],
-    "tools": ["[Tool 1]", "[Tool 2]"]
+    "id": "krungsri-nimble",
+    "kind": "work",
+    "start": "2023-09",
+    "end": "2025-08",
+    "role": "Full Stack Developer",
+    "company": "Krungsri Nimble Co., Ltd.",
+    "unit": "Outsourced ผ่าน PP&P Advance · กรุงเทพฯ",
+    "phase": "fintech",
+    "areas": ["fullstack", "fintech", "mobile"],
+    "highlight": false,
+    "summary": "พัฒนาและดูแลฟีเจอร์ของ KMA แอป mobile banking ของกรุงศรี",
+    "groups": [
+      {
+        "title": "",
+        "items": [
+          "พัฒนาและดูแลฟีเจอร์ของ KMA แอป mobile banking ของกรุงศรี — หน้าบ้าน Flutter กับ C# REST APIs",
+          "ส่งมอบตามมาตรฐานการเขียนโค้ดและโปรโตคอลความปลอดภัยระดับธนาคาร"
+        ]
+      }
+    ],
+    "tech": ["Flutter", "C# / .NET", "REST APIs"]
+  },
+  {
+    "id": "2c2p",
+    "kind": "work",
+    "start": "2021-05",
+    "end": "2023-09",
+    "role": "Full Stack Developer",
+    "company": "2C2P Co., Ltd.",
+    "unit": "Payment gateway · กรุงเทพฯ",
+    "phase": "fintech",
+    "areas": ["fullstack", "fintech", "cloud"],
+    "highlight": true,
+    "summary": "พัฒนา PACO แอป payment gateway สำหรับธนาคาร และดูแล performance ของ payment flow ที่ใช้งานจริง",
+    "groups": [
+      {
+        "title": "",
+        "items": [
+          "พัฒนาและดูแล PACO แอป payment gateway สำหรับธนาคาร — หน้าบ้าน Angular, หลังบ้าน .NET 6, เก็บข้อมูลบน MySQL และ DynamoDB, เชื่อมต่อ Elasticsearch",
+          "เชื่อมบริการ AWS (Lambda, ECS, Batch) และรับผิดชอบ performance และความเสถียรของ payment flow ที่ใช้งานจริง",
+          "นำการอบรมเรื่อง architecture และ design pattern ให้นักพัฒนา และเป็นคนที่ทีมส่งปัญหาเทคนิคที่ยากที่สุดมาให้"
+        ]
+      }
+    ],
+    "tech": ["Angular", ".NET 6", "MySQL", "DynamoDB", "Elasticsearch", "AWS Lambda", "AWS ECS", "AWS Batch"]
+  },
+  {
+    "id": "blueventure",
+    "kind": "work",
+    "start": "2017-07",
+    "end": "2021-04",
+    "role": "Full Stack Developer",
+    "company": "BlueVenture Group PCL",
+    "unit": "ระบบประกันภัย · กรุงเทพฯ",
+    "phase": "fintech",
+    "areas": ["fullstack", "insurtech"],
+    "highlight": false,
+    "summary": "สร้าง dashboard งานปฏิบัติการประกันภัยที่เจ้าหน้าที่บริษัทประกันใช้ทุกวัน",
+    "groups": [
+      {
+        "title": "",
+        "items": [
+          "สร้างและดูแล dashboard งานปฏิบัติการประกันภัย (Angular, .NET Core) ที่เจ้าหน้าที่บริษัทประกันใช้อนุมัติเคลม ตรวจสอบ นัดซ่อม และติดตามความพึงพอใจต่ออู่",
+          "ออกแบบ backend service ที่ขยายได้ และการเชื่อมต่อ API ที่ปลอดภัยกับบริษัทประกันพันธมิตร"
+        ]
+      }
+    ],
+    "tech": ["Angular", ".NET Core", "SQL Server", "REST APIs"]
+  },
+  {
+    "id": "kasikorn-securities",
+    "kind": "work",
+    "start": "2016",
+    "end": "2017",
+    "role": "Quantitative Analyst",
+    "company": "Kasikorn Securities PCL",
+    "unit": "Research Department · กรุงเทพฯ",
+    "phase": "finance",
+    "areas": ["fintech", "data"],
+    "highlight": false,
+    "summary": "รวบรวมและวิเคราะห์ข้อมูลตลาดให้นักวิเคราะห์ฝ่ายวิจัย",
+    "groups": [
+      {
+        "title": "",
+        "items": [
+          "รวบรวมและวิเคราะห์ข้อมูลตลาดจาก Bloomberg, ธนาคารแห่งประเทศไทย และ NSDB ให้นักวิเคราะห์ฝ่ายวิจัย",
+          "เปลี่ยนงานประจำวันที่ทำซ้ำให้เป็นอัตโนมัติด้วย Excel macro และ VBA"
+        ]
+      }
+    ],
+    "tech": ["Bloomberg", "Excel VBA"]
+  },
+  {
+    "id": "mba",
+    "kind": "education",
+    "start": "2014",
+    "end": "2014",
+    "role": "MBA, Finance",
+    "company": "มหาวิทยาลัยเกษตรศาสตร์",
+    "unit": "GPA 3.53 / 4.00",
+    "phase": "finance",
+    "areas": ["fintech"],
+    "highlight": false,
+    "summary": "ปริญญาโทบริหารธุรกิจ สาขาการเงิน",
+    "groups": [],
+    "tech": []
+  },
+  {
+    "id": "eagle",
+    "kind": "work",
+    "start": "2012",
+    "end": "2013",
+    "role": "Freelance Developer",
+    "company": "Eagle Technology Co., Ltd.",
+    "unit": "กรุงเทพฯ",
+    "phase": "dev",
+    "areas": ["fullstack"],
+    "highlight": false,
+    "summary": "พัฒนาฟีเจอร์ให้ Eagle-HRS ซอฟต์แวร์ HR และ payroll ที่ใช้ใน 300+ บริษัท",
+    "groups": [
+      {
+        "title": "",
+        "items": [
+          "Freelance developer ให้ Eagle-HRS ซอฟต์แวร์เฮาส์ด้าน HR และ payroll ของไทยที่มีลูกค้า 300+ บริษัท",
+          "พัฒนาฟีเจอร์ของแอป HR ด้วย .NET"
+        ]
+      }
+    ],
+    "tech": ["C# / .NET"]
+  },
+  {
+    "id": "ookbee",
+    "kind": "work",
+    "start": "2011",
+    "end": "2012",
+    "role": "Mobile Application Developer",
+    "company": "Ookbee Co., Ltd.",
+    "unit": "กรุงเทพฯ",
+    "phase": "dev",
+    "areas": ["mobile"],
+    "highlight": false,
+    "summary": "เข้าร่วมทีมช่วงเติบโตแรกของ Ookbee ร้านหนังสือ e-book อันดับต้นของไทย",
+    "groups": [
+      {
+        "title": "",
+        "items": [
+          "เข้าร่วมช่วงเติบโตแรกของ Ookbee ร้านหนังสือ e-book ชั้นนำของไทย",
+          "สร้างและดูแลฟีเจอร์ของแอป iOS และ Android"
+        ]
+      }
+    ],
+    "tech": ["iOS", "Android"]
+  },
+  {
+    "id": "mic",
+    "kind": "work",
+    "start": "2010",
+    "end": "2011",
+    "role": "Developer (C# .NET)",
+    "company": "Microsoft Innovation Center",
+    "unit": "กรุงเทพฯ",
+    "phase": "dev",
+    "areas": ["fullstack"],
+    "highlight": false,
+    "summary": "ส่วนหนึ่งของเครือข่าย Microsoft ที่สนับสนุนนักพัฒนาซอฟต์แวร์ในประเทศ",
+    "groups": [
+      {
+        "title": "",
+        "items": [
+          "ส่วนหนึ่งของเครือข่ายระดับโลกของ Microsoft ที่สนับสนุนนักพัฒนาซอฟต์แวร์ท้องถิ่น",
+          "พัฒนาแอปพลิเคชันด้วย C# และ .NET และจบ developer program"
+        ]
+      }
+    ],
+    "tech": ["C# / .NET"]
+  },
+  {
+    "id": "beng",
+    "kind": "education",
+    "start": "2010",
+    "end": "2010",
+    "role": "B.Eng. in Computer Engineering",
+    "company": "มหาวิทยาลัยขอนแก่น",
+    "unit": "GPA 3.07 / 4.00",
+    "phase": "study",
+    "areas": ["fullstack"],
+    "highlight": false,
+    "summary": "ปริญญาตรีวิศวกรรมคอมพิวเตอร์",
+    "groups": [],
+    "tech": []
   }
 ]

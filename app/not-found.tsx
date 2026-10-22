@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <>
       <SiteHeader />
-      <main className="container main">
+      <main className="main shell narrow">
         <div className="page-intro">
           <h1>ไม่พบหน้านี้</h1>
           <p className="lead">

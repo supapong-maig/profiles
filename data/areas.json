@@ -1,0 +1,9 @@
+[
+  { "id": "ai", "label": "AI" },
+  { "id": "fullstack", "label": "Full-Stack" },
+  { "id": "fintech", "label": "FinTech" },
+  { "id": "insurtech", "label": "Insurtech" },
+  { "id": "cloud", "label": "Cloud" },
+  { "id": "mobile", "label": "มือถือ" },
+  { "id": "data", "label": "ข้อมูล" }
+]

@@ -1,20 +1,26 @@
 import Link from "next/link";
 import { profile } from "@/lib/data";
-import { sections } from "@/lib/sections";
-import { Logo } from "./Logo";
+
+const nav = [
+  { href: "/#focus", label: "ความสนใจ" },
+  { href: "/#experience", label: "ประสบการณ์" },
+  { href: "/#projects", label: "ผลงาน" },
+  { href: "/#stack", label: "เทคโนโลยี" },
+  { href: "/#contact", label: "ติดต่อ" },
+];
 
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <div className="container site-header__inner">
+      <div className="shell site-header__inner">
         <Link href="/" className="brand">
-          <Logo />
+          <span className="brand__mark" aria-hidden="true">SN</span>
           <span>{profile.name}</span>
         </Link>
         <nav aria-label="เมนูหลัก" className="site-nav">
-          {sections.map((s) => (
-            <Link key={s.href} href={s.href}>
-              {s.short}
+          {nav.map((n) => (
+            <Link key={n.href} href={n.href}>
+              {n.label}
             </Link>
           ))}
         </nav>

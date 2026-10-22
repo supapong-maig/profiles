@@ -1,30 +1,27 @@
 import type { Metadata, Viewport } from "next";
-import { Kanit } from "next/font/google";
+import { Chakra_Petch, IBM_Plex_Mono, IBM_Plex_Sans_Thai } from "next/font/google";
 import { profile } from "@/lib/data";
 import "./globals.css";
 
-const kanit = Kanit({
-  subsets: ["thai", "latin"],
-  weight: ["300", "400", "500", "600"],
-  display: "swap",
-  variable: "--font-kanit",
-});
+const display = Chakra_Petch({ subsets: ["thai", "latin"], weight: ["500", "600", "700"], display: "swap", variable: "--font-display" });
+const body = IBM_Plex_Sans_Thai({ subsets: ["thai", "latin"], weight: ["400", "500", "600"], display: "swap", variable: "--font-body" });
+const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], display: "swap", variable: "--font-mono" });
 
 export const metadata: Metadata = {
   title: { default: `${profile.name} — ${profile.headline}`, template: `%s · ${profile.name}` },
-  description: profile.summary,
+  description: profile.summary.join(" "),
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f7f5ef" },
-    { media: "(prefers-color-scheme: dark)", color: "#15181d" },
+    { media: "(prefers-color-scheme: light)", color: "#F2F4F3" },
+    { media: "(prefers-color-scheme: dark)", color: "#0E1514" },
   ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="th" className={kanit.variable}>
+    <html lang="th" className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <body>{children}</body>
     </html>
   );

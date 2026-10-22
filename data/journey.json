@@ -1,0 +1,7 @@
+[
+  { "id": "study", "years": "– 2010", "title": "วิศวกรรมคอมพิวเตอร์", "desc": "ปริญญาตรีวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น" },
+  { "id": "dev", "years": "2010 – 2013", "title": ".NET และมือถือ", "desc": "นักพัฒนา C# .NET ที่ Microsoft Innovation Center, แอป iOS / Android ที่ Ookbee และงาน HR software" },
+  { "id": "finance", "years": "2014 – 2017", "title": "การเงินและการลงทุน", "desc": "MBA การเงิน มหาวิทยาลัยเกษตรศาสตร์ แล้วเป็น Quantitative Analyst ที่ Kasikorn Securities" },
+  { "id": "fintech", "years": "2017 – 2025", "title": "FinTech & Insurtech", "desc": "ระบบประกันภัย, payment gateway สำหรับธนาคาร และแอป mobile banking" },
+  { "id": "ai", "years": "2025 – ปัจจุบัน", "title": "AI-Native", "desc": "agent harness รอบ Claude Code และ Covera SaaS ประกันภัยด้วย AI" }
+]
