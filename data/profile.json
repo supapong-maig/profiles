@@ -1,7 +1,7 @@
 {
   "name": "Supapong Ngonkham",
   "headline": "Senior Full-Stack Engineer · AI-Native",
-  "focusLine": "AI-Native · Agent Harness · RAG · Full-Stack · FinTech & Insurtech",
+  "focusLine": "AI-Native · Full-Stack Engineer · FinTech & InsurTech",
   "bio": [
     "ผมเป็นวิศวกร Full-Stack ที่ส่งมอบเว็บแอปพลิเคชันขึ้น production มากว่า 15 ปี ในงาน FinTech, payment gateway และประกันภัย พื้นฐานเป็นวิศวกรรมคอมพิวเตอร์ และต่อ MBA ด้านการเงิน จึงเข้าใจทั้งโค้ดและธุรกิจการเงินที่โค้ดนั้นรับใช้",
     "สองปีหลังผมทำงานแบบ AI-native: กำกับ Claude Code agents ให้สร้าง pull request ที่ merge ได้จริง คุมคุณภาพด้วย test loop อัตโนมัติ และเปลี่ยนความผิดพลาดที่ AI ทำซ้ำ ๆ ให้เป็น context และ guardrail ที่ใช้ซ้ำได้ ล่าสุดออกแบบและสร้าง Covera ตั้งแต่ต้นจนจบ: SaaS ประกันภัยด้วย AI ที่ใช้ RAG บนเอกสารประกันภาษาไทย, OCR และด่าน PDPA"
