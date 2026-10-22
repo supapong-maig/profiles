@@ -2,7 +2,15 @@
   "name": "Supapong Ngonkham",
   "headline": "Senior Full-Stack Engineer · AI-Native",
   "focusLine": "AI-Native · Full-Stack Engineer · FinTech & InsurTech",
-  "photo": { "src": "/profile.jpg", "width": 640, "height": 800 },
+  "photo": {
+    "src": "/profile.jpg",
+    "width": 640,
+    "height": 800
+  },
+  "resume": {
+    "src": "/Supapong_Ngonkham_Resume.pdf",
+    "size": "230 KB"
+  },
   "bio": [
     {
       "en": "Senior full-stack engineer with 15+ years shipping production web applications across FinTech, payment gateways, and insurance. I trained as a computer engineer and later took an MBA in finance, so I understand both the code and the financial business it serves.",
@@ -27,26 +35,101 @@
       "th": "ออกแบบและส่งมอบ Covera ครบวงจร: RAG บนเอกสารประกันภาษาไทยที่ทุกคำตอบอ้างอิงแหล่งที่มาได้"
     }
   ],
-  "now": { "role": "Senior Full-Stack Engineer (AI-Native)", "company": "Jaidee Innovation Co., Ltd.", "since": "2025-09" },
-  "experienceYears": { "en": "15+ years", "th": "15+ ปี" },
+  "now": {
+    "role": "Senior Full-Stack Engineer (AI-Native)",
+    "company": "Jaidee Innovation Co., Ltd.",
+    "since": "2025-09"
+  },
+  "experienceYears": {
+    "en": "15+ years",
+    "th": "15+ ปี"
+  },
   "path": [
-    { "en": "Computer engineering", "th": "วิศวกรรมคอมพิวเตอร์" },
-    { "en": ".NET and mobile", "th": ".NET และมือถือ" },
-    { "en": "MBA in finance", "th": "MBA การเงิน" },
-    { "en": "FinTech & InsurTech", "th": "FinTech & InsurTech" },
-    { "en": "AI-Native", "th": "AI-Native" }
+    {
+      "en": "Computer engineering",
+      "th": "วิศวกรรมคอมพิวเตอร์"
+    },
+    {
+      "en": ".NET and mobile",
+      "th": ".NET และมือถือ"
+    },
+    {
+      "en": "MBA in finance",
+      "th": "MBA การเงิน"
+    },
+    {
+      "en": "FinTech & InsurTech",
+      "th": "FinTech & InsurTech"
+    },
+    {
+      "en": "AI-Native",
+      "th": "AI-Native"
+    }
   ],
-  "coreTech": ["Claude Code", "TypeScript", "Nuxt 3", "Vue 3", "React", "Angular", "NestJS", "C# / .NET", "MongoDB Atlas", "AWS", "Vercel"],
-  "location": { "en": "Bangkok, Thailand", "th": "กรุงเทพฯ ประเทศไทย" },
+  "coreTech": [
+    "Claude Code",
+    "TypeScript",
+    "Nuxt 3",
+    "Vue 3",
+    "React",
+    "Angular",
+    "NestJS",
+    "C# / .NET",
+    "MongoDB Atlas",
+    "AWS",
+    "Vercel"
+  ],
+  "location": {
+    "en": "Bangkok, Thailand",
+    "th": "กรุงเทพฯ ประเทศไทย"
+  },
   "languages": [
-    { "name": { "en": "Thai", "th": "ไทย" }, "level": { "en": "native", "th": "ภาษาแม่" } },
-    { "name": { "en": "English", "th": "อังกฤษ" }, "level": { "en": "professional", "th": "ใช้งานระดับมืออาชีพ" } }
+    {
+      "name": {
+        "en": "Thai",
+        "th": "ไทย"
+      },
+      "level": {
+        "en": "native",
+        "th": "ภาษาแม่"
+      }
+    },
+    {
+      "name": {
+        "en": "English",
+        "th": "อังกฤษ"
+      },
+      "level": {
+        "en": "professional",
+        "th": "ใช้งานระดับมืออาชีพ"
+      }
+    }
   ],
-  "interests": ["Agent Harness Engineering", "Full-Stack Development", "FinTech & InsurTech"],
+  "interests": [
+    "Agent Harness Engineering",
+    "Full-Stack Development",
+    "FinTech & InsurTech"
+  ],
   "contacts": [
-    { "label": "Email", "url": "mailto:gfarmfrenzy@gmail.com", "display": "gfarmfrenzy@gmail.com" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/supapong-ngonkham", "display": "linkedin.com/in/supapong-ngonkham" },
-    { "label": "GitHub", "url": "https://github.com/supapong-maig", "display": "github.com/supapong-maig" },
-    { "label": "Covera", "url": "https://covera.jaidee-innovation.com", "display": "covera.jaidee-innovation.com" }
+    {
+      "label": "Email",
+      "url": "mailto:gfarmfrenzy@gmail.com",
+      "display": "gfarmfrenzy@gmail.com"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/supapong-ngonkham",
+      "display": "linkedin.com/in/supapong-ngonkham"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/supapong-maig",
+      "display": "github.com/supapong-maig"
+    },
+    {
+      "label": "Covera",
+      "url": "https://covera.jaidee-innovation.com",
+      "display": "covera.jaidee-innovation.com"
+    }
   ]
 }
