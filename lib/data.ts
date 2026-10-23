@@ -17,6 +17,7 @@ export type Profile = {
   focusLine: string;
   photo: { src: string; width: number; height: number };
   resume: { src: string; size: string };
+  share: { image: { src: string; width: number; height: number }; description: L };
   bio: L[];
   summary: L[];
   now: { role: string; company: string; since: string };
