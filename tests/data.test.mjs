@@ -46,6 +46,11 @@ test("profile photo exists", () => {
   assert.ok(existsSync(new URL(`../public${profile.photo.src}`, import.meta.url)), `public${profile.photo.src} is missing`);
 });
 
+test("share card image exists", () => {
+  assert.ok(existsSync(new URL(`../public${profile.share.image.src}`, import.meta.url)), `public${profile.share.image.src} is missing`);
+  assert.ok(profile.share.description.en.length <= 200, "share description should stay short enough for link previews");
+});
+
 test("resume PDF exists", () => {
   assert.ok(existsSync(new URL(`../public${profile.resume.src}`, import.meta.url)), `public${profile.resume.src} is missing`);
 });

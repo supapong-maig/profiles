@@ -2,6 +2,17 @@
   {
     "date": "2026-10-23",
     "title": {
+      "en": "Share card for LinkedIn and chat apps",
+      "th": "การ์ดตัวอย่างเวลาแชร์ลิงก์"
+    },
+    "detail": {
+      "en": "A 1200×630 preview image with photo, title and highlights.",
+      "th": "ภาพตัวอย่างขนาด 1200×630 มีรูป ตำแหน่ง และจุดเด่น"
+    }
+  },
+  {
+    "date": "2026-10-23",
+    "title": {
       "en": "Résumé download",
       "th": "เพิ่มปุ่มดาวน์โหลด Resume"
     },

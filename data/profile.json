@@ -11,6 +11,17 @@
     "src": "/Supapong_Ngonkham_Resume.pdf",
     "size": "230 KB"
   },
+  "share": {
+    "image": {
+      "src": "/og.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    "description": {
+      "en": "Senior full-stack engineer, AI-native. 15+ years in FinTech, payments and insurance; builds agent harnesses for Claude Code and built Covera, AI for Thai insurance agents.",
+      "th": "วิศวกร Full-Stack แบบ AI-native ประสบการณ์ 15+ ปีในงาน FinTech, payment และประกันภัย สร้าง agent harness สำหรับ Claude Code และสร้าง Covera AI สำหรับตัวแทนประกันไทย"
+    }
+  },
   "bio": [
     {
       "en": "Senior full-stack engineer with 15+ years shipping production web applications across FinTech, payment gateways, and insurance. I trained as a computer engineer and later took an MBA in finance, so I understand both the code and the financial business it serves.",
